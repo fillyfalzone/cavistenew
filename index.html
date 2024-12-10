@@ -49,7 +49,7 @@
                 
                 <!-- Icône avec FontAwesome -->
                 <div class="d-flex align-items-center">
-                                      
+
                     <!-- Bouton CTA -->                   
                     <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
                 </div>
@@ -86,7 +86,7 @@
             </p>
             
             <!-- Carrousel d'accueil mise en avant de certains produits sélectionnés par le caviste -->
-            <div class="carousel-container">
+            <article class="carousel-container">
                 <div id="wineCarousel" class="carousel slide" data-ride="carousel" data-interval="false" aria-live="polite">
                     <div class="carousel-inner">
                         <!-- 1er produit -->
@@ -172,7 +172,7 @@
                         <span class="sr-only">Suivant</span>
                     </button>
                 </div>
-            </div> 
+            </article> 
         </section>
 
         <!-- Section Partage et Expertise -->
@@ -183,14 +183,14 @@
             <!-- Conteneur de la section avec deux parties -->
             <div class="row">
                 <!-- Partie gauche : Photo et texte alignés -->
-                <div class="col-md-6 mb-4 d-flex align-items-center"> <!-- Div ou article ici ? à voir -->
+                <article class="col-md-6 mb-4 d-flex align-items-center"> <!-- Div ou article ici ? à voir -->
                     <!-- Photo du caviste -->
                     <img src="images/lecaviste.png" alt="Portrait du caviste passionné de La Clave D'Or, expert en vins rares et spiritueux d'exception" class="img-caviste me-3" loading="lazy">
                     <!-- Texte -->
                     <p>
                         Que vous cherchiez une bouteille unique, un conseil expert, ou un moment de partage autour d’un atelier de dégustation, vous êtes au bon endroit. Ici, le vin, le champagne et les spiritueux sont plus qu’une boisson : c’est une passion, une histoire, un art de vivre.
                     </p>
-                </div>
+                </article>
 
                 <!-- Partie droite : Liste des icônes avec texte sous chaque icône -->
                 <ul class="row col-md-6">
@@ -338,7 +338,7 @@
         <!-- Section Produits -->
         <section id="menu-produits" class="products container py-1">
             <h2 class="text-center mb-5">Nos Produits</h2>
-            <div class="row">
+            <article class="row">
                 <!-- Produit 1 : Vin -->
                 <div class="col-md-4 mb-4"> <!-- Div obligatoire pour bootstrap et conserver le bon comportement des blocs-->
                     <figure class="product-item">
@@ -380,7 +380,7 @@
                         </figcaption>
                     </figure>
                 </div>
-            </div>
+            </article>
         </section>
 
         <!-- Section Dégustation -->
@@ -389,22 +389,18 @@
             <p>Que ce soit pour une dégustation sur place, un événement privé ou un moment entre amis, notre cave est le lieu parfait pour partager des instants mémorables.</p>
 
             <!-- Carrousel Vidéo immersive de dégustation -->
-            <div class="video-carousel d-flex mt-5">
-                <figure class="video-container" id="video-left">
-                    <video class="video-thumbnail" src="videos/video1.mp4" muted loop loading="lazy" aria-label="Vidéo 1 - Dégustation de charcuterie et de vin à La Clave D'or"></video>
-                </figure>
-                <figure class="video-container" id="video-center">
-                    <video class="video-main" src="videos/video2.mp4" autoplay muted loop loading="lazy" aria-label="Vidéo 2 - Dégustation de charcuterie et de vin à La Clave D'or"></video>
-                </figure>
-                <figure class="video-container" id="video-right">
-                    <video class="video-thumbnail" src="videos/video3.mp4" muted loop loading="lazy" aria-label="Vidéo 3 - Dégustation de charcuterie et de vin à La Clave D'or"></video>
-                </figure>
+            <div class="carousel container col-12 my-5">
+                <ul class="carousel__list">
+                    <li class="carousel__item" data-pos="-1"><!-- Vidéo ajouté dynamiquement --></li>
+                    <li class="carousel__item" data-pos="0"><!-- Vidéo ajouté dynamiquement --></li>
+                    <li class="carousel__item" data-pos="1"><!-- Vidéo ajouté dynamiquement --></li>
+                </ul>
             </div>
         </section>
 
         <!-- Section Accès et Privatisation -->
-        <section id="reception" class="container mt-5 my-1">
-            <h3 class="mb-5">Nos Facilités et Privatisation pour événements</h3>
+        <section id="reception" class="container my-1">
+            <h2 class="mb-5">Nos Facilités et Privatisation pour événements</h2>
             <ul class="facility-list mb-5">
                 <li>À deux pas de CAP 3000, au cœur de la Côte d'Azur.</li>
                 <li>Facile d'accès depuis Nice, Saint-Laurent-du-Var et Villeneuve-Loubet.</li>
