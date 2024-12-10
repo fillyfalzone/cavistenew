@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Nos Produits - La Clave d'Or</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta essentielles pour SEO -->
+    <meta name="description" content="Découvrez la sélection de produits de La Clave d'Or : vins, champagnes, spiritueux, panier garnis et accessoires. Trouvez le cadeau parfait ou enrichissez votre cave.">
+    <meta name="robots" content="index, follow">
+
+    <!-- CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="design/style.css">
+
+    <!-- Structured Data -->
+    <script src="scripts/structured-data.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top" role="navigation">
+            <div class="container"> <!-- Obligé de conserver la div pour le comportement bootstrap -->
+                <!-- Logo dans la navbar -->
+                <a href="index.html" aria-label="Redirection vers la page d'accueil">
+                    <img src="images/logo.png" alt="Logo du site web" class="logo">
+                </a>
+
+                <!-- Bouton Hamburger -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7h22M4 15h22M4 23h22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <!-- Liens de navigation -->
+                <div class="collapse navbar-collapse" id="navbarMenu"> <!-- Div obligatoire logique bootstrap -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Icône avec FontAwesome -->
+                <div class="d-flex align-items-center">
+                                      
+                    <!-- Bouton CTA -->                   
+                    <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section vidéo d'accueil immersive -->
+        <section id="hero" class="hero">
+            <h1 class="visually-hidden">Vidéo immersive de présentation de notre caviste</h1> <!-- Titre masqué pour l'accessibilité -->
+            
+            <!-- Video immersive -->
+            <video class="hero-video hero-video-wrapper" autoplay muted playsinline>
+                <source src="videos/caviste.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+
+            <div class="hero-content">
+                <a href="#introduction" class="btn btn-lg mt-5" aria-label="Découvrir notre histoire et nos produits">Découvrir</a> <!-- Lien vers la section "introduction" avec un label d'accessibilité -->
+            </div>
+        </section>    
+
+        <!-- Section Introduction de la page produits -->
+        <section id="introduction" class="discover-section container py-5">    
+
+            <!-- Logo de l'entreprise -->
+            <img src="images/logo.png" alt="Logo de La Clave D'or" class="mb-2 small-logo">
+            
+            <!-- TITRE SECONDAIRE -->
+            <h2 class="py-5">La Clave D'or</h2>
+            
+            <p>
+                "Au cœur de <em>Cagnes-sur-Mer</em>, à deux pas de Nice, cette cave à vin historique a été entièrement réinventée depuis le 1er juillet 2024 par un jeune propriétaire passionné, déterminé à redonner toute sa splendeur à ce lieu emblématique. Aujourd’hui, <span class="clave">La Clave D'or</span> offre un cadre moderne et accueillant, où l’authenticité rencontre l’élégance, pour les amateurs de vins, champagnes et spiritueux d'exception. Nichée au cœur de la région PACA, cette adresse incontournable vous invite à explorer une sélection soigneusement élaborée de vins d’exception, champagnes et spiritueux, dans un cadre mêlant authenticité et modernité."
+            </p>
+        </section>    
+
+
+        <!-- Section Produits -->
+        <section id="blocs-produits" class="products container py-1"> <!-- ATTENTION A L'ID ICI SELON MENU DROPDOWN -->
+            <h2 class="text-center mb-5">Nos Produits</h2>
+            <div class="row">
+                <!-- Produit 1 : Vin -->
+                <div class="col-md-4 mb-4"> <!-- Div obligatoire pour bootstrap et conserver le bon comportement des blocs-->
+                    <figure class="product-item">
+                        <img src="images/vin.webp" class="product-img" loading="lazy" alt="Sélection de bouteilles de vin rouge, blanc et rosé de grande qualité">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Vins</h3>
+                            <p class="product-text">
+                                Découvrez notre gamme variée de vins rouges, blancs et rosés, sélectionnés avec soin pour satisfaire tous les amateurs.
+                            </p>
+                            <a href="produits.html#vins" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des vins">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Produit 2 : Champagne -->
+                <div class="col-md-4 mb-4">
+                    <figure class="product-item">
+                        <img src="images/champagne.webp" class="product-img" loading="lazy" alt="Bouteille de champagne premium pour célébrations">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Champagnes</h3>
+                            <p class="product-text">
+                                Savourez nos champagnes d'exception, parfaits pour vos moments de fête ou pour accompagner vos plats raffinés.
+                            </p>
+                            <a href="produits.html#champagne" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des champagnes">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Produit 3 : Spiritueux -->
+                <div class="col-md-4 mb-4">
+                    <figure class="product-item">
+                        <img src="images/spiritueux.webp" class="product-img" loading="lazy" alt="Collection de spiritueux rares et raffinés">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Spiritueux</h3>
+                            <p class="product-text">
+                                Explorez nos spiritueux uniques, une collection exclusive pour les connaisseurs et les amateurs de découvertes.
+                            </p>
+                            <a href="produits.html#spiritueux" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des spiritueux">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Produit 1 : Vin -->
+                <div class="col-md-4 mb-4"> <!-- Div obligatoire pour bootstrap et conserver le bon comportement des blocs-->
+                    <figure class="product-item">
+                        <img src="images/vin.webp" class="product-img" loading="lazy" alt="Sélection de bouteilles de vin rouge, blanc et rosé de grande qualité">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Vins</h3>
+                            <p class="product-text">
+                                Découvrez notre gamme variée de vins rouges, blancs et rosés, sélectionnés avec soin pour satisfaire tous les amateurs.
+                            </p>
+                            <a href="produits.html#vins" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des vins">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Produit 2 : Champagne -->
+                <div class="col-md-4 mb-4">
+                    <figure class="product-item">
+                        <img src="images/champagne.webp" class="product-img" loading="lazy" alt="Bouteille de champagne premium pour célébrations">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Champagnes</h3>
+                            <p class="product-text">
+                                Savourez nos champagnes d'exception, parfaits pour vos moments de fête ou pour accompagner vos plats raffinés.
+                            </p>
+                            <a href="produits.html#champagne" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des champagnes">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Produit 3 : Spiritueux -->
+                <div class="col-md-4 mb-4">
+                    <figure class="product-item">
+                        <img src="images/spiritueux.webp" class="product-img" loading="lazy" alt="Collection de spiritueux rares et raffinés">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Spiritueux</h3>
+                            <p class="product-text">
+                                Explorez nos spiritueux uniques, une collection exclusive pour les connaisseurs et les amateurs de découvertes.
+                            </p>
+                            <a href="produits.html#spiritueux" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des spiritueux">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>       
+
+    <!-- Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Logo et Nom -->
+            <img src="images/logo.png" alt="Logo de l'entreprise" class="logo-footer d-flex align-items-center mb-3 mb-md-0" style="width: 60px;">
+
+            <!-- Liens du Footer et Réseaux Sociaux -->
+            <div class="footer-links d-flex flex-column flex-md-row align-items-center">
+                <div class="social-icons mb-3 mb-md-0 me-md-3">
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Visitez notre page Instagram"><img src="images/instagram.webp" alt="Icône du réseau social Instagram" class="social-icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Visitez notre page Facebook"><img src="images/facebook.webp" alt="Icône du réseau social Facebook" class="social-icon"></a>
+                    <a href="https://www.snapchat.com/" target="_blank" aria-label="Visitez notre page Snapchat"><img src="images/snapchat.webp" alt="Icône du réseau social Snapchat" class="social-icon"></a>
+                </div>
+                <a href="contact.html" class="btn btn-custom">Contact</a>
+                <a href="mentions.html" class="text-white ms-md-2 me-md-3">Mentions légales</a>
+                <a href="politique.html" class="text-white ms-md-2">Politique de confidentialité</a>
+            </div>
+        </div>
+        
+        <!-- Avertissement sur l'alcool -->
+        <div class="text-center mt-5">
+            <i class="fas fa-exclamation-triangle text-warning" style="font-size: 30px;"></i>
+            <p>
+                <strong>La vente d'alcool est interdite aux moins de 18 ans.</strong><br>
+                L'abus d'alcool est dangereux pour la santé. À consommer avec modération.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JS personnalisé -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

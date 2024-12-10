@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Contactez-nous - La Clave d'Or</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta essentielles pour SEO -->
+    <meta name="description" content="Contactez La Clave d'Or, votre caviste à Cagnes-sur-Mer. Trouvez nos coordonnées, horaires, et formulaire pour toute question ou réservation.">
+    <meta name="robots" content="index, follow">
+
+    <!-- CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="design/style.css">
+
+    <!-- Structured Data -->
+    <script src="scripts/structured-data.js"></script>
+</head>
+
+
+<main>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top" role="navigation">
+            <div class="container"> <!-- Obligé de conserver la div pour le comportement bootstrap -->
+                <!-- Logo dans la navbar -->
+                <a href="index.html" aria-label="Redirection vers la page d'accueil">
+                    <img src="images/logo.png" alt="Logo du site web" class="logo">
+                </a>
+
+                <!-- Bouton Hamburger -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7h22M4 15h22M4 23h22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <!-- Liens de navigation -->
+                <div class="collapse navbar-collapse" id="navbarMenu"> <!-- Div obligatoire logique bootstrap -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Icône avec FontAwesome -->
+                <div class="d-flex align-items-center">
+                                      
+                    <!-- Bouton CTA -->                   
+                    <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section vidéo d'accueil immersive -->
+        <section id="hero" class="hero">
+            <h1 class="visually-hidden">Vidéo immersive de présentation de notre caviste</h1> <!-- Titre masqué pour l'accessibilité -->
+            
+            <!-- Video immersive -->
+            <video class="hero-video hero-video-wrapper" autoplay muted playsinline>
+                <source src="videos/caviste.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+
+            <div class="hero-content">
+                <a href="#introduction" class="btn btn-lg mt-5" aria-label="Découvrir notre histoire et nos produits">Découvrir</a> <!-- Lien vers la section "introduction" avec un label d'accessibilité -->
+            </div>
+        </section>    
+
+        <!-- Section Introduction de la page produits -->
+        <section id="introduction" class="discover-section container py-5">    
+
+            <!-- Logo de l'entreprise -->
+            <img src="images/logo.png" alt="Logo de La Clave D'or" class="mb-2 small-logo">
+            
+            <!-- TITRE SECONDAIRE -->
+            <h2 class="py-5">La Clave D'or</h2>
+            
+            <p>
+                "Au cœur de <em>Cagnes-sur-Mer</em>, à deux pas de Nice, cette cave à vin historique a été entièrement réinventée depuis le 1er juillet 2024 par un jeune propriétaire passionné, déterminé à redonner toute sa splendeur à ce lieu emblématique. Aujourd’hui, <span class="clave">La Clave D'or</span> offre un cadre moderne et accueillant, où l’authenticité rencontre l’élégance, pour les amateurs de vins, champagnes et spiritueux d'exception. Nichée au cœur de la région PACA, cette adresse incontournable vous invite à explorer une sélection soigneusement élaborée de vins d’exception, champagnes et spiritueux, dans un cadre mêlant authenticité et modernité."
+            </p>
+        </section>
+
+        <!-- Formulaire de contact et Newsletter -->
+        <section>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <!-- Formulaire de Contact -->
+                    <div class="col-md-8">
+                        <div class="card card-contact mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title mb-4">Contactez-nous</h3>
+                                <form id="contactForm" action="process_form.php" method="POST">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="firstName">Prénom <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Votre prénom" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="lastName">Nom <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Votre nom" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Votre adresse email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Téléphone (optionnel)</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Votre numéro de téléphone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article Newsletter -->
+                    <article class="col-md-8">
+                        <div class="card shadow-lg card-newsletter">
+                            <div class="card-body">
+                                <h3 class="card-title text-center mb-4">Inscrivez-vous à notre Newsletter</h3>
+                                <!-- Intégration du formulaire Sendinblue via iframe -->
+                                <iframe width="540" height="305" src="https://6aad8a55.sibforms.com/serve/MUIFAD-akA8BKV_93G7gIkLsh-2QqzjgNcovpZJcLN0PUz4Hp6vD1_b593lKJyyNtNo9cWx8aRM2k2UElX0avJvgoa423zpfgo86Ask61NnrPLs3Z8aWK-jKfDz7_LJ_aHvd_C0bNDkLsyIHCghEq4Z5tcBmXu144pluTm3pzrc1DAMmlO1VRqVEm3pb3gmdqQW98ULEVAepcWKx" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des horaires et de la carte -->
+        <section id="informations" class="container my-1">
+            <h2 class="mb-5">Emplacement et Horaires</h2>
+            
+            <!-- Horaires d'Ouverture -->
+            <h3 class="font-weight-bold mb-4 text-white">Consultez nos horaires d'ouverture</h3>
+    
+            <!-- Liste des horaires -->
+            <div class="row justify-content-center my-1">
+                <div class="col-md-6 hour-card p-4 rounded ">
+                    <h3 class="hour-title">Horaires de la semaine</h3>
+                    <dl class="hour-time">
+                        <div class="hour-item">
+                            <dt><strong>Du Lundi au Jeudi :</strong></dt>
+                            <dd><time datetime="10:00-13:00">10h00 - 13h00</time> / <time datetime="16:00-20:00">16h00 - 20h00</time></dd>
+                        </div>
+                        <div class="hour-item">
+                            <dt><strong>Vendredi et Samedi :</strong></dt>
+                            <dd><time datetime="10:00-13:00">10h00 - 13h00</time> / <time datetime="16:00-22:00">16h00 - 22h00</time></dd>
+                        </div>
+                        <div class="hour-item">
+                            <dt><strong>Dimanche :</strong></dt>
+                            <dd><time datetime="10:00-13:00">10h00 - 13h00</time> (Fermé l'après-midi)</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        
+            <!-- Contactez-nous -->
+            <p class="font-weight-bold mt-3 mb-5">Contactez-nous au : <a href="tel:+33658984377" class="text-warning" aria-label="Appeler le numéro 06 58 98 43 77">06 58 98 43 77</a></p>
+        
+            <!-- Google Map Embed -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe aria-label="Carte de la Cave à Vin La Clave D'Or" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5772.799348836897!2d7.172945876630464!3d43.660656951947836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd3959305d945%3A0xfb8fa2f6ff4ecf11!2sCAVE%20A%20VIN%20LA%20CLAVE%20D%E2%80%99OR!5e0!3m2!1sfr!2sfr!4v1733642780059!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section> 
+    </main>    
+
+	<!-- Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Logo et Nom -->
+            <img src="images/logo.png" alt="Logo de l'entreprise" class="logo-footer d-flex align-items-center mb-3 mb-md-0" style="width: 60px;">
+
+            <!-- Liens du Footer et Réseaux Sociaux -->
+            <div class="footer-links d-flex flex-column flex-md-row align-items-center">
+                <div class="social-icons mb-3 mb-md-0 me-md-3">
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Visitez notre page Instagram"><img src="images/instagram.webp" alt="Icône du réseau social Instagram" class="social-icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Visitez notre page Facebook"><img src="images/facebook.webp" alt="Icône du réseau social Facebook" class="social-icon"></a>
+                    <a href="https://www.snapchat.com/" target="_blank" aria-label="Visitez notre page Snapchat"><img src="images/snapchat.webp" alt="Icône du réseau social Snapchat" class="social-icon"></a>
+                </div>
+                <a href="contact.html" class="btn btn-custom">Contact</a>
+                <a href="mentions.html" class="text-white ms-md-2 me-md-3">Mentions légales</a>
+                <a href="politique.html" class="text-white ms-md-2">Politique de confidentialité</a>
+            </div>
+        </div>
+        
+        <!-- Avertissement sur l'alcool -->
+        <div class="text-center mt-5">
+            <i class="fas fa-exclamation-triangle text-warning" style="font-size: 30px;"></i>
+            <p>
+                <strong>La vente d'alcool est interdite aux moins de 18 ans.</strong><br>
+                L'abus d'alcool est dangereux pour la santé. À consommer avec modération.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JS personnalisé -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

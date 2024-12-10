@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>La Clave d'Or - Caviste à Cagnes-sur-Mer</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta essentielles pour SEO -->
+    <meta name="description" content="La Clave d'Or, caviste à Cagnes-sur-Mer, propose des vins, champagnes, spiritueux, et autres produits d'exception, ainsi que des ateliers de dégustation, dispose d'un parking privatif et d'accès PMR.">
+    <meta name="robots" content="index, follow">
+
+    <!-- CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="design/style.css">
+
+    <!-- Structured Data -->
+    <script src="scripts/structured-data.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top" role="navigation">
+            <div class="container"> <!-- Obligé de conserver la div pour le comportement bootstrap -->
+                <!-- Logo dans la navbar -->
+                <a href="index.html" aria-label="Redirection vers la page d'accueil">
+                    <img src="images/logo.png" alt="Logo du site web" class="logo">
+                </a>
+
+                <!-- Bouton Hamburger -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7h22M4 15h22M4 23h22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <!-- Liens de navigation -->
+                <div class="collapse navbar-collapse" id="navbarMenu"> <!-- Div obligatoire logique bootstrap -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Icône avec FontAwesome -->
+                <div class="d-flex align-items-center">
+                                      
+                    <!-- Bouton CTA -->                   
+                    <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>        
+        <!-- Section vidéo d'accueil immersive -->
+        <section id="hero" class="hero">
+            <h1 class="visually-hidden">Vidéo immersive de présentation de notre caviste</h1> <!-- Titre masqué pour l'accessibilité -->
+            
+            <!-- Video immersive -->
+            <video class="hero-video hero-video-wrapper" autoplay muted playsinline>
+                <source src="videos/caviste.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+
+            <div class="hero-content">
+                <a href="#introduction" class="btn btn-lg mt-5" aria-label="Découvrir notre histoire et nos produits">Découvrir</a> <!-- Lien vers la section "introduction" avec un label d'accessibilité -->
+            </div>
+        </section>    
+
+        <!-- Section Introduction du site -->
+        <section id="introduction" class="discover-section container py-5">
+            <!-- Logo de l'entreprise -->
+            <img src="images/logo.png" alt="Logo de La Clave D'or" class="mb-2 small-logo">
+            
+            <!-- TITRE SECONDAIRE -->
+            <h2 class="py-5">La Clave D'or</h2>
+            
+            <p>
+                "Au cœur de <em>Cagnes-sur-Mer</em>, à deux pas de Nice, cette cave à vin historique a été entièrement réinventée depuis le 1er juillet 2024 par un jeune propriétaire passionné, déterminé à redonner toute sa splendeur à ce lieu emblématique. Aujourd’hui, <span class="clave">La Clave D'or</span> offre un cadre moderne et accueillant, où l’authenticité rencontre l’élégance, pour les amateurs de vins, champagnes et spiritueux d'exception. Nichée au cœur de la région PACA, cette adresse incontournable vous invite à explorer une sélection soigneusement élaborée de vins d’exception, champagnes et spiritueux, dans un cadre mêlant authenticité et modernité."
+            </p>
+            
+            <!-- Carrousel d'accueil mise en avant de certains produits sélectionnés par le caviste -->
+            <div class="carousel-container">
+                <div id="wineCarousel" class="carousel slide" data-ride="carousel" data-interval="false" aria-live="polite">
+                    <div class="carousel-inner">
+                        <!-- 1er produit -->
+                        <div class="carousel-item active" role="group" aria-labelledby="product1"> <!-- Div obligatoire logique bootstrap -->
+                            <figure class="figure">
+                                <img src="images/vin1.webp" class="d-block w-100 figure-img img-fluid" alt="Château Margaux 2018, Vin rouge d'exception aux arômes complexes" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product1">Château Margaux 2018</h3>
+                                    <p class="product-description">Arômes de fruits noirs et épices</p>
+                                    <p class="product-price">89,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 2ème produit -->
+                        <div class="carousel-item" role="group" aria-labelledby="product2">
+                            <figure class="figure">
+                                <img src="images/vin2.webp" class="d-block w-100 figure-img img-fluid" alt="Château Lafite 2019, Notes de fruits rouges et d'épices" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product2">Château Lafite 2019</h3>
+                                    <p class="product-description">Fruits rouges et épices</p>
+                                    <p class="product-price">95,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 3ème produit -->
+                        <div class="carousel-item" role="group" aria-labelledby="product3">
+                            <figure class="figure">
+                                <img src="images/vin3.webp" class="d-block w-100 figure-img img-fluid" alt="Château Latour 2017, Un vin plein de puissance et de complexité" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product3">Château Latour 2017</h3>
+                                    <p class="product-description">Puissant et complexe</p>
+                                    <p class="product-price">120,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 4ème produit -->
+                        <div class="carousel-item" role="group" aria-labelledby="product4">
+                            <figure class="figure">
+                                <img src="images/vin4.webp" class="d-block w-100 figure-img img-fluid" alt="Château Mouton Rothschild 2016, Arômes de cassis et de vanille" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product4">Château Mouton Rothschild 2016</h3>
+                                    <p class="product-description">Cassis, vanille et chocolat</p>
+                                    <p class="product-price">200,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 5ème produit -->
+                        <div class="carousel-item" role="group" aria-labelledby="product5">
+                            <figure class="figure">
+                                <img src="images/vin5.webp" class="d-block w-100 figure-img img-fluid" alt="Château Pichon Longueville 2015, Tannins soyeux et finale longue" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product5">Château Pichon Longueville 2015</h3>
+                                    <p class="product-description">Tannins soyeux, longue finale</p>
+                                    <p class="product-price">150,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 6ème produit -->
+                        <div class="carousel-item" role="group" aria-labelledby="product6">
+                            <figure class="figure">
+                                <img src="images/vin6.webp" class="d-block w-100 figure-img img-fluid" alt="Château Pontet-Canet 2014, Un vin bio avec des notes florales" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product6">Château Pontet-Canet 2014</h3>
+                                    <p class="product-description">Vin bio aux notes florales</p>
+                                    <p class="product-price">85,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Contrôles du carrousel -->
+                    <button class="carousel-control-prev" type="button" data-target="#wineCarousel" data-slide="prev" aria-label="Précédent" role="button">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#wineCarousel" data-slide="next" aria-label="Suivant" role="button">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Suivant</span>
+                    </button>
+                </div>
+            </div> 
+        </section>
+
+        <!-- Section Partage et Expertise -->
+        <section id="expertise" class="container">
+            <!-- Titre de la section -->
+            <h2 class="mb-5">Partage et Expertise</h2>
+
+            <!-- Conteneur de la section avec deux parties -->
+            <div class="row">
+                <!-- Partie gauche : Photo et texte alignés -->
+                <div class="col-md-6 mb-4 d-flex align-items-center"> <!-- Div ou article ici ? à voir -->
+                    <!-- Photo du caviste -->
+                    <img src="images/lecaviste.png" alt="Portrait du caviste passionné de La Clave D'Or, expert en vins rares et spiritueux d'exception" class="img-caviste me-3" loading="lazy">
+                    <!-- Texte -->
+                    <p>
+                        Que vous cherchiez une bouteille unique, un conseil expert, ou un moment de partage autour d’un atelier de dégustation, vous êtes au bon endroit. Ici, le vin, le champagne et les spiritueux sont plus qu’une boisson : c’est une passion, une histoire, un art de vivre.
+                    </p>
+                </div>
+
+                <!-- Partie droite : Liste des icônes avec texte sous chaque icône -->
+                <ul class="row col-md-6">
+                    <!-- Icône 1 -->
+                    <li class="col-md-4">
+                        <a href="index.html#reception" class="skill-icon" aria-label="Aller à la section Réception">
+                            <i class="fa-solid fa-wine-bottle"></i>
+                        </a>
+                        <p>Réception</p>
+                    </li>
+                    
+                    <!-- Icône 2 -->
+                    <li class="col-md-4">
+                        <a href="index.html#experience-cave" class="skill-icon" aria-label="Aller à la section Ateliers & Dégustations">
+                            <i class="fa-solid fa-wine-glass-empty"></i>
+                        </a>
+                        <p>Ateliers & Dégustations</p>
+                    </li>
+
+                    <!-- Icône 3 -->
+                    <li class="col-md-4">
+                        <a href="index.html#menu-produits" class="skill-icon" aria-label="Aller à la section Produits">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <p>Produits d'exception</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Section Noël -->
+        <section id="noel" class="container my-5">            
+            <!-- Titre de la section -->
+            <h2 class="mb-5">Célébrez <span class="noel-style">Noël</span> avec nos Offres Spéciales !</h2>
+
+            <!-- Logo Noël -->
+            <img src="images/logonoel.webp" alt="Logo de Noël" class="logo-noel">
+
+            <!-- Lien vers les offres -->
+            <a href="produits.html" class="cta-noel mb-5" aria-label="Voir nos offres spéciales de Noël">
+                🎁 Découvrir nos Offres de Noël 🎄
+            </a>
+
+            <!-- Texte de promotion -->
+            <p>
+                Cette année, pour <span class="noel-style">Noël</span>, nous avons sélectionné des paniers et des produits festifs parfaits pour accompagner vos repas de fête. Profitez de nos offres exceptionnelles et faites plaisir à vos proches avec nos produits de qualité, soigneusement choisis par notre caviste. Que vous cherchiez un cadeau unique ou un délice pour vos repas, vous trouverez tout ici pour un <span class="noel-style">Noël</span> magique !
+            </p>
+
+            <!-- Carrousel des produits de Noël -->
+            <div class="carousel-container">
+                <div id="noelCarousel" class="carousel slide" data-ride="carousel" data-interval="false" aria-live="polite">
+                    <div class="carousel-inner">
+                        <!-- 1er produit de Noël -->
+                        <div class="carousel-item active" role="group" aria-labelledby="product1">
+                            <figure class="figure">
+                                <img src="images/panier1.webp" class="d-block w-100 figure-img img-fluid" alt="Panier gourmand de Noël 1" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product1">Panier de Noël 1</h3>
+                                    <p class="product-description">Assortiment de délices de Noël</p>
+                                    <p class="product-price">45,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 2ème produit de Noël -->
+                        <div class="carousel-item" role="group" aria-labelledby="product2">
+                            <figure class="figure">
+                                <img src="images/panier2.webp" class="d-block w-100 figure-img img-fluid" alt="Panier gourmand de Noël 2" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product2">Panier de Noël 2</h3>
+                                    <p class="product-description">Sélection de vins et chocolats</p>
+                                    <p class="product-price">60,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 3ème produit de Noël -->
+                        <div class="carousel-item" role="group" aria-labelledby="product3">
+                            <figure class="figure">
+                                <img src="images/panier3.webp" class="d-block w-100 figure-img img-fluid" alt="Panier gourmand de Noël 3" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product3">Panier de Noël 3</h3>
+                                    <p class="product-description">Vins fins et douceurs sucrées</p>
+                                    <p class="product-price">75,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 4ème produit de Noël -->
+                        <div class="carousel-item" role="group" aria-labelledby="product4">
+                            <figure class="figure">
+                                <img src="images/panier4.webp" class="d-block w-100 figure-img img-fluid" alt="Panier gourmand de Noël 4" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product4">Panier de Noël 4</h3>
+                                    <p class="product-description">Sélection gourmande et festive</p>
+                                    <p class="product-price">85,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 5ème produit de Noël -->
+                        <div class="carousel-item" role="group" aria-labelledby="product5">
+                            <figure class="figure">
+                                <img src="images/panier5.webp" class="d-block w-100 figure-img img-fluid" alt="Panier gourmand de Noël 5" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product5">Panier de Noël 5</h3>
+                                    <p class="product-description">Gourmandises de Noël</p>
+                                    <p class="product-price">50,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- 6ème produit de Noël -->
+                        <div class="carousel-item" role="group" aria-labelledby="product6">
+                            <figure class="figure">
+                                <img src="images/panier6.webp" class="d-block w-100 figure-img img-fluid" alt="Panier gourmand de Noël 6" loading="lazy">
+                                <figcaption class="figure-caption">
+                                    <h3 class="product-title" id="product6">Panier de Noël 6</h3>
+                                    <p class="product-description">Vins et sucreries de Noël</p>
+                                    <p class="product-price">95,00 €</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Contrôles du carrousel -->
+                    <button class="carousel-control-prev" type="button" data-target="#noelCarousel" data-slide="prev" aria-label="Précédent" role="button">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#noelCarousel" data-slide="next" aria-label="Suivant" role="button">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Suivant</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Vidéo Noël -->
+            <video autoplay loop muted playsinline loading="lazy" class="christmas-video mt-5">
+                <source src="videos/noel.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+        </section>
+
+        <!-- Section Produits -->
+        <section id="menu-produits" class="products container py-1">
+            <h2 class="text-center mb-5">Nos Produits</h2>
+            <div class="row">
+                <!-- Produit 1 : Vin -->
+                <div class="col-md-4 mb-4"> <!-- Div obligatoire pour bootstrap et conserver le bon comportement des blocs-->
+                    <figure class="product-item">
+                        <img src="images/vin.webp" class="product-img" loading="lazy" alt="Sélection de bouteilles de vin rouge, blanc et rosé de grande qualité">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Vins</h3>
+                            <p class="product-text">
+                                Découvrez notre gamme variée de vins rouges, blancs et rosés, sélectionnés avec soin pour satisfaire tous les amateurs.
+                            </p>
+                            <a href="produits.html#vins" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des vins">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Produit 2 : Champagne -->
+                <div class="col-md-4 mb-4">
+                    <figure class="product-item">
+                        <img src="images/champagne.webp" class="product-img" loading="lazy" alt="Bouteille de champagne premium pour célébrations">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Champagnes</h3>
+                            <p class="product-text">
+                                Savourez nos champagnes d'exception, parfaits pour vos moments de fête ou pour accompagner vos plats raffinés.
+                            </p>
+                            <a href="produits.html#champagne" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des champagnes">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Produit 3 : Spiritueux -->
+                <div class="col-md-4 mb-4">
+                    <figure class="product-item">
+                        <img src="images/spiritueux.webp" class="product-img" loading="lazy" alt="Collection de spiritueux rares et raffinés">
+                        <figcaption class="product-body">
+                            <h3 class="product-title">Spiritueux</h3>
+                            <p class="product-text">
+                                Explorez nos spiritueux uniques, une collection exclusive pour les connaisseurs et les amateurs de découvertes.
+                            </p>
+                            <a href="produits.html#spiritueux" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des spiritueux">Voir la sélection</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Dégustation -->
+        <section id="experience-cave" class="container mt-5 my-1">
+            <h2 class="mb-5">Venez vivre une expérience unique à La Clave D'or ! 🍷</h2>
+            <p>Que ce soit pour une dégustation sur place, un événement privé ou un moment entre amis, notre cave est le lieu parfait pour partager des instants mémorables.</p>
+
+            <!-- Carrousel Vidéo immersive de dégustation -->
+            <div class="video-carousel d-flex mt-5">
+                <figure class="video-container" id="video-left">
+                    <video class="video-thumbnail" src="videos/video1.mp4" muted loop loading="lazy" aria-label="Vidéo 1 - Dégustation de charcuterie et de vin à La Clave D'or"></video>
+                </figure>
+                <figure class="video-container" id="video-center">
+                    <video class="video-main" src="videos/video2.mp4" autoplay muted loop loading="lazy" aria-label="Vidéo 2 - Dégustation de charcuterie et de vin à La Clave D'or"></video>
+                </figure>
+                <figure class="video-container" id="video-right">
+                    <video class="video-thumbnail" src="videos/video3.mp4" muted loop loading="lazy" aria-label="Vidéo 3 - Dégustation de charcuterie et de vin à La Clave D'or"></video>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section Accès et Privatisation -->
+        <section id="reception" class="container mt-5 my-1">
+            <h3 class="mb-5">Nos Facilités et Privatisation pour événements</h3>
+            <ul class="facility-list mb-5">
+                <li>À deux pas de CAP 3000, au cœur de la Côte d'Azur.</li>
+                <li>Facile d'accès depuis Nice, Saint-Laurent-du-Var et Villeneuve-Loubet.</li>
+                <li>Parking privé à disposition de nos clients.</li>
+                <li>Places réservées et accès adaptés aux personnes à mobilité réduite.<i class="fa-solid fa-wheelchair pmr-icon"></i></li>
+            </ul>
+
+            <h3 class="mb-5">Privatisez notre Cave à Vin pour un événement inoubliable ! 🍾</h3>
+            <p class="mb-1">
+                Depuis notre reprise en juillet, nous avons voulu créer un lieu où chacun se sente bien, que ce soit pour un apéro entre amis, une soirée en famille ou un afterwork. Nous serions ravis de vous accueillir et vous faire découvrir une multitude de saveurs.
+            </p>
+
+            <video autoplay loop muted playsinline loading="lazy" class="event-video my-5">
+                <source src="videos/bienvenue.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+
+            <!-- Liste des avantages -->
+            <ul class="private-event-benefits">
+                <li class="benefit-icon">🍾 Ambiance intime et conviviale, idéale pour tous vos événements.</li>
+                <li class="benefit-icon">📋 Options d’organisation sur-mesure adaptées à vos besoins.</li>
+                <li class="benefit-icon">📞 Assistance personnalisée pour planifier votre événement.</li>
+            </ul>
+
+            <div class="mt-5 mb-5">
+                <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
+            </div>
+        </section>
+
+        <!-- Section Réseaux sociaux et Avis Clients -->
+        <section id="social-reviews" class="container mt-5 my-1">
+            <h2 class="mb-5">Découvrez les Avis de Nos Clients</h2>            
+
+            <!-- Avis des utilisateurs -->
+            <div class="row mb-5">
+                <article class="col-12 col-md-6 mb-4">
+                    <div class="review-block">
+                        <h3>Nicaud P.</h3>
+                        <div class="stars" role="img" aria-label="5 étoiles">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <blockquote>
+                            "Super sympa pour boire un verre, et acheter une bonne bouteille. Charcuterie à déguster excellente !!! À très vite."
+                        </blockquote>
+                    </div>
+                </article>
+                
+                <article class="col-12 col-md-6 mb-4">
+                    <div class="review-block">
+                        <h3>Benjamin P.</h3>
+                        <div class="stars" role="img" aria-label="5 étoiles">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <blockquote>
+                            "Gérant sympathique et connaisseur, une belle découverte."
+                        </blockquote>
+                    </div>
+                </article>
+        
+                <article class="col-12 col-md-6 mb-4">
+                    <div class="review-block">
+                        <h3>Kevin</h3>
+                        <div class="stars" role="img" aria-label="5 étoiles">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <blockquote>
+                            "Un endroit super moderne avec une ambiance chaleureuse. Le choix est top, je recommande à 100%."
+                        </blockquote>
+                    </div>
+                </article>
+        
+                <article class="col-12 col-md-6 mb-4">
+                    <div class="review-block">
+                        <h3>Arnaud</h3>
+                        <div class="stars" role="img" aria-label="5 étoiles">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <blockquote>
+                            "Un lieu convivial où on sent vraiment la passion pour les bons produits. Toujours de bons conseils et une superbe sélection."
+                        </blockquote>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Section Réseaux sociaux -->                
+            <div class="social-icons-large mb-5">
+                <p>Suivez-nous sur les réseaux sociaux pour découvrir nos prochains événements, dégustations et ateliers. Restez à jour avec toutes nos activités !</p>
+                <a href="https://www.instagram.com/la_clave_dor/" target="_blank" aria-label="Visitez notre page Instagram">
+                    <img src="images/instagram.webp" alt="Icône du réseau social Instagram" class="social-icon-large" loading="lazy">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Visitez notre page Facebook">
+                    <img src="images/facebook.webp" alt="Icône du réseau social Facebook" class="social-icon-large" loading="lazy">
+                </a>
+                <a href="https://www.snapchat.com/" target="_blank" aria-label="Visitez notre page Snapchat">
+                    <img src="images/snapchat.webp" alt="Icône du réseau social Snapchat" class="social-icon-large" loading="lazy">
+                </a>
+            </div>
+        </section>
+
+        <!-- Section des horaires et de la carte -->
+        <section id="informations" class="container my-1">
+            <h2 class="mb-5">Emplacement et Horaires</h2>
+            
+            <!-- Horaires d'Ouverture -->
+            <h3 class="font-weight-bold mb-4 text-white">Consultez nos horaires d'ouverture</h3>
+    
+            <!-- Liste des horaires -->
+            <div class="row justify-content-center my-1">
+                <div class="col-md-6 hour-card p-4 rounded ">
+                    <h3 class="hour-title">Horaires de la semaine</h3>
+                    <dl class="hour-time">
+                        <div class="hour-item">
+                            <dt><strong>Du Lundi au Jeudi :</strong></dt>
+                            <dd><time datetime="10:00-13:00">10h00 - 13h00</time> / <time datetime="16:00-20:00">16h00 - 20h00</time></dd>
+                        </div>
+                        <div class="hour-item">
+                            <dt><strong>Vendredi et Samedi :</strong></dt>
+                            <dd><time datetime="10:00-13:00">10h00 - 13h00</time> / <time datetime="16:00-22:00">16h00 - 22h00</time></dd>
+                        </div>
+                        <div class="hour-item">
+                            <dt><strong>Dimanche :</strong></dt>
+                            <dd><time datetime="10:00-13:00">10h00 - 13h00</time> (Fermé l'après-midi)</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        
+            <!-- Contactez-nous -->
+            <p class="font-weight-bold mt-3 mb-5">Contactez-nous au : <a href="tel:+33658984377" class="text-warning" aria-label="Appeler le numéro 06 58 98 43 77">06 58 98 43 77</a></p>
+        
+            <!-- Google Map Embed -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe aria-label="Carte de la Cave à Vin La Clave D'Or" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5772.799348836897!2d7.172945876630464!3d43.660656951947836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd3959305d945%3A0xfb8fa2f6ff4ecf11!2sCAVE%20A%20VIN%20LA%20CLAVE%20D%E2%80%99OR!5e0!3m2!1sfr!2sfr!4v1733642780059!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>        
+    </main>    
+
+	<!-- Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Logo et Nom -->
+            <img src="images/logo.png" alt="Logo de l'entreprise" class="logo-footer d-flex align-items-center mb-3 mb-md-0" style="width: 60px;">
+
+            <!-- Liens du Footer et Réseaux Sociaux -->
+            <div class="footer-links d-flex flex-column flex-md-row align-items-center">
+                <div class="social-icons mb-3 mb-md-0 me-md-3">
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Visitez notre page Instagram"><img src="images/instagram.webp" alt="Icône du réseau social Instagram" class="social-icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Visitez notre page Facebook"><img src="images/facebook.webp" alt="Icône du réseau social Facebook" class="social-icon"></a>
+                    <a href="https://www.snapchat.com/" target="_blank" aria-label="Visitez notre page Snapchat"><img src="images/snapchat.webp" alt="Icône du réseau social Snapchat" class="social-icon"></a>
+                </div>
+                <a href="contact.html" class="btn btn-custom">Contact</a>
+                <a href="mentions.html" class="text-white ms-md-2 me-md-3">Mentions légales</a>
+                <a href="politique.html" class="text-white ms-md-2">Politique de confidentialité</a>
+            </div>
+        </div>
+        
+        <!-- Avertissement sur l'alcool -->
+        <div class="text-center mt-5">
+            <i class="fas fa-exclamation-triangle text-warning" style="font-size: 30px;"></i>
+            <p>
+                <strong>La vente d'alcool est interdite aux moins de 18 ans.</strong><br>
+                L'abus d'alcool est dangereux pour la santé. À consommer avec modération.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JS personnalisé -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
