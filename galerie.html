@@ -10,10 +10,28 @@
     <!-- Meta essentielles pour SEO -->
     <meta name="description" content="Découvrez la galerie de La Clave d'Or, où nous partageons des photos de nos vins, spiritueux, événements, et ateliers de dégustation à Cagnes-sur-Mer.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.laclavedor.fr/galerie.html">
+
+    <!-- Balises Open Graph pour Facebook, LinkedIn et autres -->
+    <meta property="og:title" content="Galerie - La Clave d'Or">
+    <meta property="og:description" content="Découvrez notre galerie d'images et vidéos des produits et événements de La Clave d'Or.">
+    <meta property="og:image" content="https://laclavedor.com/images/fond1.webp">
+    <meta property="og:url" content="https://laclavedor.com/galerie.html">
+    <meta property="og:type" content="website">
+
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galerie - La Clave d'Or">
+    <meta name="twitter:description" content="Découvrez notre galerie d'images et vidéos des produits et événements de La Clave d'Or.">
+    <meta name="twitter:image" content="https://laclavedor.com/images/fond1.webp">
+    <meta name="twitter:url" content="https://laclavedor.com/galerie.html">
 
     <!-- CSS Files -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="snow/snow.css">
+    <link rel="stylesheet" href="verificationAge/verif.css">
+    <link rel="stylesheet" href="design/galerie.css">
     <link rel="stylesheet" href="design/style.css">
 
     <!-- Structured Data -->
@@ -27,7 +45,7 @@
             <div class="container"> <!-- Obligé de conserver la div pour le comportement bootstrap -->
                 <!-- Logo dans la navbar -->
                 <a href="index.html" aria-label="Redirection vers la page d'accueil">
-                    <img src="images/logo.png" alt="Logo du site web" class="logo">
+                    <img src="images/logo.webp" alt="Logo de La Clave D'or" class="logo" width="60" height="60">
                 </a>
 
                 <!-- Bouton Hamburger -->
@@ -42,14 +60,16 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
                     </ul>
                 </div>
                 
                 <!-- Icône avec FontAwesome -->
                 <div class="d-flex align-items-center">
-                                      
+                    <a href="https://maps.app.goo.gl/jmfMexmvm4U3ymgt8" class="map-link" target="_blank" aria-label="Voir la carte">
+                        <i class="fa fa-map-marker-alt map-icon"></i>
+                    </a> 
                     <!-- Bouton CTA -->                   
                     <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
                 </div>
@@ -58,15 +78,13 @@
     </header>
 
     <main>
+         <!-- Snow fall -->
+         <div id="snowfall"></div> 
         <!-- Section vidéo d'accueil immersive -->
         <section id="hero" class="hero">
-            <h1 class="visually-hidden">Vidéo immersive de présentation de notre caviste</h1> <!-- Titre masqué pour l'accessibilité -->
+            <h1 class="visually-hidden">Galerie de La Clave D'or - Cave à Vin à Cagnes-sur-Mer</h1> <!-- Titre masqué pour l'accessibilité -->
             
-            <!-- Video immersive -->
-            <video class="hero-video hero-video-wrapper" autoplay muted playsinline>
-                <source src="videos/caviste.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la balise vidéo.
-            </video>
+            <img class="hero-video hero-video-wrapper" src="images/fond1.webp" alt="Photo de l'intérieur de La Clave D'or">
 
             <div class="hero-content">
                 <a href="#introduction" class="btn btn-lg mt-5" aria-label="Découvrir notre histoire et nos produits">Découvrir</a> <!-- Lien vers la section "introduction" avec un label d'accessibilité -->
@@ -74,36 +92,75 @@
         </section>    
 
         <!-- Section Introduction de la page produits -->
-        <section id="introduction" class="discover-section container py-5">    
+        <section id="introduction" class="discover-section container my-5">    
 
             <!-- Logo de l'entreprise -->
-            <img src="images/logo.png" alt="Logo de La Clave D'or" class="mb-2 small-logo">
+            <img src="images/logo.webp" alt="Logo de La Clave D'or" loading="lazy" width="80" height="80">
             
             <!-- TITRE SECONDAIRE -->
-            <h2 class="py-5">La Clave D'or</h2>
+            <h2 class="my-5">La Galerie de La Clave D'or</h2>
             
-            <p>
-                "Au cœur de <em>Cagnes-sur-Mer</em>, à deux pas de Nice, cette cave à vin historique a été entièrement réinventée depuis le 1er juillet 2024 par un jeune propriétaire passionné, déterminé à redonner toute sa splendeur à ce lieu emblématique. Aujourd’hui, <span class="clave">La Clave D'or</span> offre un cadre moderne et accueillant, où l’authenticité rencontre l’élégance, pour les amateurs de vins, champagnes et spiritueux d'exception. Nichée au cœur de la région PACA, cette adresse incontournable vous invite à explorer une sélection soigneusement élaborée de vins d’exception, champagnes et spiritueux, dans un cadre mêlant authenticité et modernité."
-            </p>
+            <p> "Si vous aimez découvrir de <em>nouvelles saveurs</em> et que vous souhaitez en savoir plus sur notre <em>cave à vin</em>, alors laissez-vous plonger dans l'atmosphère unique de <span class="clave">La Clave D'or</span>. À travers cette sélection de photos, explorez notre espace récemment rénové, où <em>modernité et authenticité</em> se rencontrent. Chaque image vous invite à découvrir notre univers, où le <em>vin</em>, le <em>champagne</em> et les <em>spiritueux</em> prennent vie dans un cadre à la fois chaleureux et professionnel. Découvrez ce qui fait de <span class="clave">La Clave D'or</span> un lieu de passion et d'excellence." </p>
         </section> 
+        <section>
+            <!-- Photo Grid -->
+            <div class="row flex-container"> 
+            <div class="column">
+            <img src="images/galerie/galerie.webp" style="width:100%">
+            <img src="images/galerie/galerie1.webp" style="width:100%">
+            <img src="images/galerie/galerie2.webp" style="width:100%">
+            <img src="images/galerie/galerie3.webp" style="width:100%">
+            <img src="images/galerie/galerie4.webp" style="width:100%">
+            <img src="images/galerie/galerie5.webp" style="width:100%">
+            <img src="images/galerie/galerie6.webp" style="width:100%">
+            </div>
+            <div class="column">
+            <img src="images/galerie/galerie7.webp" style="width:100%">
+            <img src="images/galerie/galerie8.webp" style="width:100%">
+            <img src="images/galerie/galerie9.webp" style="width:100%">
+            <img src="images/galerie/galerie10.webp" style="width:100%">
+            <img src="images/galerie/galerie11.webp" style="width:100%">
+            <img src="images/galerie/galerie12.webp" style="width:100%">
+            </div>  
+            <div class="column">
+            <img src="images/galerie/galerie13.webp" style="width:100%">
+            <img src="images/galerie/galerie14.webp" style="width:100%">
+            <img src="images/galerie/galerie15.webp" style="width:100%">
+            <img src="images/galerie/galerie16.webp" style="width:100%">
+            <img src="images/galerie/galerie17.webp" style="width:100%">
+            <img src="images/galerie/galerie.webp" style="width:100%">
+            <img src="images/galerie/galerie1.webp" style="width:100%">
+            </div>
+            <div class="column">
+            <img src="images/galerie/galerie2.webp" style="width:100%">
+            <img src="images/galerie/galerie3.webp" style="width:100%">
+            <img src="images/galerie/galerie4.webp" style="width:100%">
+            <img src="images/galerie/galerie5.webp" style="width:100%">
+            <img src="images/galerie/galerie6.webp" style="width:100%">
+            <img src="images/galerie/galerie7.webp" style="width:100%">
+            </div>
+            </div>
+        
+        </section>
     </main>    
 
 	<!-- Footer -->
-    <footer class="py-4 mt-5">
+    <footer class="py-4 my-1">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <!-- Logo et Nom -->
-            <img src="images/logo.png" alt="Logo de l'entreprise" class="logo-footer d-flex align-items-center mb-3 mb-md-0" style="width: 60px;">
+            <img src="images/logo.webp" class="logo-footer" loading="lazy" alt="Logo Footer" width="60" height="60">
 
             <!-- Liens du Footer et Réseaux Sociaux -->
             <div class="footer-links d-flex flex-column flex-md-row align-items-center">
                 <div class="social-icons mb-3 mb-md-0 me-md-3">
-                    <a href="https://www.instagram.com/" target="_blank" aria-label="Visitez notre page Instagram"><img src="images/instagram.webp" alt="Icône du réseau social Instagram" class="social-icon"></a>
-                    <a href="https://www.facebook.com/" target="_blank" aria-label="Visitez notre page Facebook"><img src="images/facebook.webp" alt="Icône du réseau social Facebook" class="social-icon"></a>
-                    <a href="https://www.snapchat.com/" target="_blank" aria-label="Visitez notre page Snapchat"><img src="images/snapchat.webp" alt="Icône du réseau social Snapchat" class="social-icon"></a>
-                </div>
-                <a href="contact.html" class="btn btn-custom">Contact</a>
+                    <a href="https://www.instagram.com/la_clave_dor/" target="_blank" aria-label="Visitez notre page Instagram">
+                        <i class="fab fa-instagram social-icon"></i>
+                    </a>
+                </div>                
+                <a href="contact.php" class="btn btn-custom">Contact</a>
                 <a href="mentions.html" class="text-white ms-md-2 me-md-3">Mentions légales</a>
                 <a href="politique.html" class="text-white ms-md-2">Politique de confidentialité</a>
+                <a href="Sitemap.xml" class="text-white ms-md-2">Sitemap</a>
             </div>
         </div>
         
@@ -117,12 +174,38 @@
         </div>
     </footer>
 
+    <!-- Modal de vérification de l'âge --> 
+    <div id="age-verification-modal" style="display: flex;">
+        <div class="modal-card">
+            <h2>Vérification d'âge</h2>
+            <p>L'abus d'alcool est dangereux pour la santé. Consommez avec modération.</p>
+            <ul>
+                <li>L'alcool est interdit aux mineurs.</li>
+                <li>Ne consommez pas d'alcool si vous devez conduire.</li>
+                      
+            </ul>
+            <label>
+                <input type="checkbox" id="age-confirmation" />
+                Je confirme avoir plus de 18 ans.
+            </label>
+          <div class="buttons">
+            <button id="enter-button" disabled style="opacity: 0.5;">Entrer</button>
+            <button id="exit-button">Quitter</button>
+          </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+     <!-- cdn particle js Snow fall-->
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <script src="snow/snow.js"></script>
+
     <!-- JS personnalisé -->
+    <script src="verificationAge/verif.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

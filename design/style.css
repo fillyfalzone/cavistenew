@@ -3,19 +3,18 @@
 /* Style global */
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url("../images/backgroundimg.png");
+    background-image: url("../images/backgroundimg.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-html, body {
-    overflow-x: hidden; /* Encore pour prévenir les débordements */
-}
+
 
 /* Effet de transition douce pour le scroll */
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 .container {
@@ -23,7 +22,7 @@ html {
 }
 
 p {
-    color: white;
+    color: #DCDCDC;
     font-size: 1.25rem; /* Taille de police plus grande, similaire à la classe .lead de Bootstrap */
     line-height: 1.6;   /* Espacement des lignes pour améliorer la lisibilité */
     margin-bottom: 1.5rem; /* Espacement en bas des paragraphes */
@@ -63,8 +62,8 @@ ul {
     overflow: hidden;
 }
 
-.discover-section {
-    scroll-margin-top: 85px;
+.mentions-section, .privacy-section, .discover-section  {
+    scroll-margin-top: 130px;
 }
 
 /* Trait de séparation */
@@ -76,13 +75,9 @@ ul {
     margin: 0 auto;
 }
 
-.small-logo {
-    max-width: 80px;
-}
-
 .logo-noel {
-    width: 200px;
-    height: auto; /* Maintient les proportions */
+    max-width: 100%;
+    height: auto; /* Maintient le ratio d'aspect */
 }
 
 .clave {
@@ -91,20 +86,21 @@ ul {
 
 /* ------------------------------------------------------------------------------------------- HEADER  --------------------------------------------------------------------------------*/
 
-/* Logo de l'entreprise */
-.logo {
-    max-width: 60px;
-}
-
 /* Personnalisation de la navigation */
 .navbar {
     background-color: #000;
     padding: 15px 30px;
     position: fixed;
     top: 0;
-    z-index: 1000;
     width: 100%;
 }
+
+/* Style ajouté pour le theme de noel (à supprimer après la période)*/
+.navbar {
+    z-index: 5;
+    overflow: hidden;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .navbar-nav .nav-item .nav-link {
     color: white;
@@ -187,9 +183,6 @@ ul {
     height: 100%; /* Prendre toute la hauteur */
     object-fit: cover; /* Remplir sans déformation */
     position: absolute; /* Positionner en arrière-plan */
-    top: 0;
-    left: 0;
-    z-index: -1; /* Placer la vidéo derrière le contenu */
 }
 
 /* Contenu de la section (texte et bouton) */
@@ -198,7 +191,6 @@ ul {
     top: 70%; /* Placer au centre verticalement */
     left: 50%; /* Placer au centre horizontalement */
     transform: translate(-50%, -50%); /* Centrer précisément */
-    z-index: 1; /* Placer devant la vidéo */
 }
 
 /* Style du bouton */
@@ -224,9 +216,9 @@ ul {
 
 /* Style pour le carrousel d'accueil */
 .carousel-container {
-    max-width: 700px;  /* Augmenter la largeur maximale du carrousel */
+    max-width: 600px;  /* Augmenter la largeur maximale du carrousel */
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .carousel-inner {
@@ -245,11 +237,10 @@ ul {
 
 .carousel-item {
     height: auto;  /* Permet à l'élément de s'ajuster automatiquement à son contenu */
-    background: transparent; /* Fond transparent */
 }
 
 .carousel-item img {
-    max-height: 300px;  /* Fixe une hauteur maximale pour les images */
+    max-height: 500px;  /* Fixe une hauteur maximale pour les images */
     object-fit: contain; /* Assure que l'image s'ajuste bien sans être déformée */
 }
 
@@ -294,24 +285,27 @@ ul {
     font-style: italic;
 }
 
-.product-price {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #b8860b; /* Couleur dorée pour le prix */
-}
-
 .product-title { /* Permet de garder le carrousel de la même taille*/
     font-weight: 700; /* Texte plus fort pour le titre */
     white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
     overflow: hidden; /* Cache le texte qui dépasse du conteneur */
     text-overflow: ellipsis; /* Ajoute des "..." à la fin du texte qui dépasse */
     max-width: 100%; 
+    font-size: 1.5rem;
+}
+
+.product-title[title] { /* Permet d'afficher le titre si celui ci est trop long */
+    cursor: help; 
 }
 
 /* --------------------------------------------------------------------------------- SECTION EXPERTISE ---------------------------------------------------------------------------------- */
 
-#reception {
-    scroll-margin-top: 100px;
+#reception, #menu-produits, #experience-cave {
+    scroll-margin-top: 150px;
+}
+
+.ul-fa {
+    padding: 0;
 }
 
 /* Style du conteneur de l'icône */
@@ -348,16 +342,6 @@ ul {
     }
 }
 
-/* Style pour l'image du caviste */
-.img-caviste {
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* Assure que l'image ne déforme pas */
-    border-radius: 50%; /* Forme ronde pour l'image */
-    margin-right: 15px; /* Espacement entre l'image et le texte */
-    border: 2px solid #B8860B; /* Bordure dorée autour de l'image */
-}
-
 /* ---------------------------------------------------------------------------------- SECTION NOEL --------------------------------------------------------------------------------------*/
 
 /* Style pour les mots Noël */
@@ -370,8 +354,10 @@ ul {
 
 /* style pour la vidéo de noël */
 .christmas-video {
-    width: 700px;
+    width: 578px;
     max-width: 100%;  /* Pour qu'elle reste responsive */
+    box-shadow: 0 0 15px 10px rgba(184, 134, 11, 0.5); /* Halo doré (#b8860b) */
+    border-radius: 5px;
 }
 
 /* Style pour le CTA de Noël */
@@ -387,7 +373,7 @@ ul {
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* Effet lumineux */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 578px; /* Largeur maximale du CTA */
 }
 
 /* Effets au survol */
@@ -406,19 +392,10 @@ ul {
 
 /* --------------------------------------------------------------------------------- SECTION BLOCS PRODUITS ------------------------------------------------------------------------------*/
 
-#menu-produits {
-    scroll-margin-top: 100px;
-}
-
-/* Section Produits Styles */
-.products {
-    padding: 3rem 0; /* Espacement vertical */
-    width: 90%;
-}
-
 .product-item {
     background-color: transparent; /* Fond transparent */
     border: 1px solid #b8860b; /* Bordure dorée */
+    border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effets au survol */
     display: flex;
     flex-direction: column;
@@ -435,9 +412,9 @@ ul {
 }
 
 .product-img {
-    height: 200px; /* Hauteur fixe pour les images */
-    object-fit: contain; /* Contenir l'image sans déformation */
-    background-color: transparent;
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: 300px; /* Ajuster ici pour réduire la taille */
+    height: auto; /* Maintient les proportions */
     margin-bottom: 15px;
 }
 
@@ -450,32 +427,25 @@ ul {
 }
 
 .product-title {
-    font-size: 1.5rem;
-    font-weight: 700; /* Texte plus fort pour le titre */
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .product-text {
     font-size: 1rem;
-    flex-grow: 1; /* Permet à toutes les descriptions d'occuper la même hauteur */
+    margin: 0; /* Réduit l'espace vertical pour économiser de la place */
+}
+
+
+#rouge, #prestige, #whisky, #panier-garni {
+    scroll-margin-top: 250px;
 }
 
 .btn-outline-light {
-    border-color: #b8860b;
-    color: #DCDCDC;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Effets au survol */
-}
-
-.btn-outline-light:hover {
-    background-color: #DCDCDC; /* Fond blanc au survol */
-    color: #121212; /* Texte sombre */
+    border-color: #B8860B;
 }
 
 /* ---------------------------------------------------------------------------------- SECTION DEGUSTATION ------------------------------------------------------------------------------*/
-
-#experience-cave {
-    scroll-margin-top: 100px;
-}
 
 /* Conteneur du carrousel */
 .carousel {
@@ -487,8 +457,11 @@ ul {
 }
 
 .carousel {
-    overflow: hidden; /* Empêche le débordement visuel */
     touch-action: pan-y; /* Désactive le scrolling horizontal, mais autorise le scroll vertical */
+}
+
+.video_parent {
+    overflow: hidden; /* Empêche le débordement visuel */
 }
 
 .carousel__list {
@@ -499,6 +472,7 @@ ul {
     height: auto;  /* La hauteur s'ajuste automatiquement selon le contenu */
     justify-content: center;
     align-items: center;  /* Centrer les éléments horizontalement */
+    
 }
 
 /* Items du carrousel */
@@ -509,7 +483,7 @@ ul {
     color: #fff;
     font-size: 2rem;
     width: 300px;
-    height: 500px; /* Hauteur des items */
+    height: 450px; /* Hauteur des items */
     border-radius: 12px;
     box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
     position: absolute;
@@ -572,11 +546,15 @@ ul {
 }
 
 /* Effet halo au survol des vidéos latérales */
-.carousel__item[data-pos]:not([data-pos="0"]):hover {
+.carousel__item[data-pos]:hover {
     box-shadow: 0 0 15px 10px rgba(184, 134, 11, 0.8); /* Halo doré (#b8860b) */
     cursor: pointer;
 }
 
+/* Halo doré permanent sur la vidéo centrale */
+.carousel__item[data-pos="0"] {
+    box-shadow: 0 0 15px 10px rgba(184, 134, 11, 0.8); /* Halo doré permanent (#b8860b) */
+}
 
 /* --------------------------------------------------------------------------------- SECTION ACCES ET PRIVE ------------------------------------------------------------------------------*/
 
@@ -604,19 +582,11 @@ ul {
 }
 
 /* Icône spécifique pour la PMR */
-.pmr-icon {
+.fa-icon {
     color: #b8860b; /* Or pour une belle mise en valeur */
     margin-right: 10px; /* Espacement entre l'icône et le texte */
     font-size: 1.5rem; /* Taille augmentée */
     vertical-align: middle; /* Alignement avec le texte */
-}
-
-/* Partie event de la section */
-.event-video {
-    max-width: 300px;
-    width: 90%;
-    border: solid 1px black;
-    border-radius: 5px;
 }
 
 /* Style pour les avantages de la privatisation */
@@ -631,8 +601,8 @@ ul {
 
 /* Agrandir les icônes sociales dans la section événements */
 .social-icons-large .social-icon-large {
-    width: 60px;  /* Taille fixe à 60px */
-    height: 60px; /* Taille fixe à 60px */
+    font-size: 60px; /* Taille fixe à 60px */
+    color: #D4AF37; /* Couleur or */
     margin: 0 10px; /* Espace entre les icônes */
     transition: transform 0.3s ease; /* Transition fluide pour l'effet de zoom */
 }
@@ -682,13 +652,15 @@ blockquote {
 
 /* Google map responsive */
 .embed-responsive {
-    max-width: 600px; /* Ajuste la largeur */
+    max-width: 570px; /* Ajuste la largeur */
     margin: 0 auto;   /* Centrer l'iframe */
+    box-shadow: 0 0 15px 10px rgba(184, 134, 11, 0.8); /* Halo doré (#b8860b) */
+    border-radius: 5px;
 }
 
 /* Section des horaires */
 .hour-card {
-    background-image: url("../images/backgroundimg-sombre.png");
+    background-image: url("../images/backgroundimg-sombre.webp");
     background-size: cover; /* Ajuste l'image pour couvrir toute la section */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Évite la répétition de l'image */
@@ -707,31 +679,99 @@ blockquote {
 
 /* ---------------------------------------------------------------- ATTENTION LES PRODUITS ONT LE MEME STYLE QUE SUR LA PAGE 1 --------------------------------------------------------*/
 
+.nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+}
+
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #b8860b;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: transparent !important
+}
+
+.nav-tabs .nav-link:hover {
+    border: none;
+    color: #b8860b;
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #b8860b;
+    background-color: transparent !important;
+    border: none;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link.active {
+    border: none;
+    color: #b8860b;
+    background-color: transparent !important;
+}
+
+
+
+.dropdown-menu {
+    border-radius: 0;
+    border: 1px solid #b8860b;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0.8;
+    border-radius: 5px;
+    background-color: #b8860b;
+    color: #000;
+}
+
+
+.dropdown-item {
+    background-color: #f8f9fa00;
+    color: #000;
+}
+
+.dropdown-item.active,
+.dropdown-item:hover {
+    background-color: #c2b28a;
+    color: #000;
+}
+
 /* ------------------------------------------------------------------------------------- PAGE CONTACT ---------------------------------------------------------------------------------*/
 
 /* Style pour le formulaire de contact */
 .card {
     border: solid 1px #b8860b;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: transparent;  /* Fond transparent pour la carte */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour la carte */
-    padding: 20px;  /* Ajoute du padding à l'intérieur de la carte */
 }
 
-.card-body {
-    padding: 20px;  /* Ajoute du padding à l'intérieur de la card-body */
+
+.form-check-label,
+.form-label {
+    color: #b8860b
 }
 
-.card-title {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 20px;  /* Espacement sous le titre */
+#contact-form .form-control,
+#contact-form .form-control:focus,
+#contact-form .form-control:active,
+#contact-form .form-control:valid {
+    border: solid 1px #b8860b;
+    background-color: #000;
+    color: #e7dfcb;
 }
+
+#contact-form .form-control:focus,
+#contact-form .form-control:active,
+#contact-form .form-control:valid {
+    box-shadow: 0 0 15px #B8860B !important;
+}
+
 
 .btn-primary {
     background-color: #b8860b;
     border-color: #DCDCDC;
     transition: background-color 0.3s ease;
+    color: black;
 }
 
 .btn-primary:hover {
@@ -739,59 +779,31 @@ blockquote {
     color: #B8860B;
 }
 
-/* Styles spécifiques pour le formulaire de contact */
-.card-contact {
-    border: solid 1px #b8860b;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+/*Lien de redirection vers index.html */
+
+.redirect-link {
+    color: #B8860B;
+    font-family: cizel, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    animation: resizeText 1s ease-in-out infinite;
 }
 
-/* Styles spécifiques pour la newsletter */
-.card-newsletter {
-    border: solid 1px #b8860b;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+@keyframes resizeText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.form-control:focus {
-    box-shadow: none;
-}
 
-/* Améliorer l'aspect général du formulaire */
-.form-group {
-    margin-bottom: 1.5rem; /* Espacement entre les champs du formulaire */
-}
 
-/* Styliser les labels en noir */
-.form-group label {
-    color: white;  /* Met les labels en noir */
-    font-weight: bold;  /* Met les labels en gras pour plus de lisibilité */
-}
 
-/* Améliorer la taille du bouton */
-.btn-block {
-    margin: 0 auto; /* Centre horizontalement */
-    max-width: 30%;  /* Limite la largeur maximale du bouton */
-    min-width: 117.28px;
-    padding: 0.75rem; /* Ajoute du padding pour un bouton plus grand */
-    font-size: 1.1rem;
-    display: block;  /* Assure que le bouton est un bloc pour pouvoir le centrer */
-}
 
-/* Personnalisation du lien */
-.newslink {
-    color: #b8860b;  /* Couleur or */
-    text-decoration: none;  /* Supprimer le soulignement par défaut */
-    transition: transform 0.3s ease, color 0.3s ease;  /* Transition fluide pour l'effet de survol */
-}
+/* ------------------------------------------------------------------------------------ NEWSLETTER -------------------------------------------------------------------------------------- */
 
-/* Effet de survol : grossissement et changement de couleur */
-.newslink:hover {
-    transform: scale(1.1);  /* Agrandir l'élément au survol */
-    color: #d1a500;  /* Optionnel : tu peux assombrir ou éclaircir la couleur or si nécessaire */
-}
 
 /* --------------------------------------------------------------------------------------- FOOTER --------------------------------------------------------------------------------------- */
 
@@ -807,6 +819,13 @@ footer .logo-footer {
     align-items: center;
 }
 
+.logo-footer {
+    max-width: 100%;
+    height: 60px; /* Maintient une hauteur fixe de 60px */
+    width: auto; /* Ajuste la largeur pour conserver les proportions */
+}
+
+
 footer .social-icons {
     display: flex;
     align-items: center;
@@ -814,13 +833,13 @@ footer .social-icons {
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
+    font-size: 30px; /* Taille fixe à 30px */
+    color: #D4AF37; /* Couleur or */
+    transition: transform 0.3s; /* Transition fluide pour l'effet de zoom */
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Zoom léger à 110% de la taille */
 }
 
 .contact-btn {
@@ -852,10 +871,7 @@ footer .footer-links a {
         flex-direction: column;
         align-items: center;
         position: fixed; /* Fixé tout en haut de la page */
-        top: 0;
-        left: 0;
         width: 100%; /* Prend toute la largeur */
-        z-index: 10; /* S'assurer que le menu passe au-dessus des autres éléments */
         background-color: black; /* Couleur de fond */
         padding: 10px; /* Espacement interne */
     }

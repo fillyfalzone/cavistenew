@@ -9,11 +9,28 @@
 
     <!-- Meta essentielles pour SEO -->
     <meta name="description" content="Mentions légales de La Clave d'Or, caviste à Cagnes-sur-Mer, détaillant les informations légales et les conditions d'utilisation du site.">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, no-follow">
+    <link rel="canonical" href="https://www.laclavedor.fr/mentions.html">
+
+    <!-- Balises Open Graph pour Facebook, LinkedIn et autres -->
+    <meta property="og:title" content="Mentions Légales - La Clave d'Or">
+    <meta property="og:description" content="Consultez les mentions légales de La Clave d'Or, votre caviste à Cagnes-sur-Mer.">
+    <meta property="og:image" content="https://laclavedor.com/images/fond1.webp">
+    <meta property="og:url" content="https://laclavedor.com/mentions.html">
+    <meta property="og:type" content="website">
+
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mentions Légales - La Clave d'Or">
+    <meta name="twitter:description" content="Consultez les mentions légales de La Clave d'Or, votre caviste à Cagnes-sur-Mer.">
+    <meta name="twitter:image" content="https://laclavedor.com/images/fond1.webp">
+    <meta name="twitter:url" content="https://laclavedor.com/mentions.html">
 
     <!-- CSS Files -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="snow/snow.css">
+    <link rel="stylesheet" href="verificationAge/verif.css">
     <link rel="stylesheet" href="design/style.css">
 
     <!-- Structured Data -->
@@ -27,7 +44,7 @@
             <div class="container"> <!-- Obligé de conserver la div pour le comportement bootstrap -->
                 <!-- Logo dans la navbar -->
                 <a href="index.html" aria-label="Redirection vers la page d'accueil">
-                    <img src="images/logo.png" alt="Logo du site web" class="logo">
+                    <img src="images/logo.webp" alt="Logo de La Clave D'or" class="logo" width="60" height="60">
                 </a>
 
                 <!-- Bouton Hamburger -->
@@ -42,14 +59,16 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
                     </ul>
                 </div>
                 
                 <!-- Icône avec FontAwesome -->
                 <div class="d-flex align-items-center">
-                                      
+                    <a href="https://maps.app.goo.gl/jmfMexmvm4U3ymgt8" class="map-link" target="_blank" aria-label="Voir la carte">
+                        <i class="fa fa-map-marker-alt map-icon"></i>
+                    </a> 
                     <!-- Bouton CTA -->                   
                     <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
                 </div>
@@ -58,33 +77,49 @@
     </header>
 
     <main>
+         <!-- Snow fall -->
+         <div id="snowfall"></div> 
+        <!-- Section vidéo d'accueil immersive -->
+        <section id="hero" class="hero">
+            <h1 class="visually-hidden">Mentions Légales - La Clave D'or</h1> <!-- Titre masqué pour l'accessibilité -->
+            
+            <img class="hero-video hero-video-wrapper" src="images/fond1.webp" alt="Photo de l'intérieur de La Clave D'or">
+
+            <div class="hero-content">
+                <a href="#introduction" class="btn btn-lg mt-5" aria-label="Découvrir notre histoire et nos produits">Découvrir</a> <!-- Lien vers la section "introduction" avec un label d'accessibilité -->
+            </div>
+        </section> 
+        
         <!-- Section Mentions Légales -->
-        <section class="mentions-section py-5">
+        <section id="introduction" class="mentions-section my-5">
             <div class="container text-center">
                 <!-- Logo -->
-                <img src="images/logo.png" alt="Logo de La Clave d'Or, caviste à Cagnes-sur-Mer" id="titre" class="mb-2 small-logo">
+                <img src="images/logo.webp" alt="Logo de La Clave D'or" loading="lazy" width="80" height="80">
 
                 <!-- Titre principal -->
-                <h2>Mentions Légales</h2>
+                <h2 class="my-5">Mentions Légales</h2>
 
                 <!-- Texte introductif -->
                 <p class="mt-5">
-                    Bienvenue dans l’espace dédié aux mentions légales de <span class="clave">La Clave d'Or</span>. Retrouvez ici toutes les informations juridiques concernant notre site, nos services, ainsi que les réglementations en vigueur, notamment celles liées à la vente d'alcool.
+                    Bienvenue dans l’espace dédié aux <em>mentions légales</em> de <span class="clave">La Clave d'Or</span>. Retrouvez ici toutes les <em>informations juridiques</em> concernant notre site, nos services, ainsi que les <em>réglementations en vigueur</em>, notamment celles liées à la vente d'alcool.
                 </p>
+
                 <p class="mt-4">
-                    Chez <span class="clave">La Clave d'Or</span>, nous mettons un point d’honneur à garantir une communication transparente et une conformité stricte aux lois applicables. Pour toute question, n’hésitez pas à nous contacter.
+                    Chez <span class="clave">La Clave d'Or</span>, nous mettons un point d’honneur à garantir une communication transparente et une conformité stricte aux <em>lois applicables</em>. Pour toute question, n’hésitez pas à nous contacter.
                 </p>
 
                 <!-- Informations générales -->
                 <h3 class="my-4">Informations Générales</h3>
-                <p><strong>Nom de l'éditeur :</strong> Kevin & Arnaud</p>
+
+                <p><strong>Nom de l'éditeur :</strong> Kevin Vincent</p>
                 <p><strong>Adresse :</strong> Nice, France</p>
-                <p><strong>Numéro de téléphone :</strong> <a href="tel:+330658984377" class="text-primary">06 58 98 43 77 (Kevin)</a>, <a href="tel:+330778103168" class="text-primary">07 78 10 31 68 (Arnaud)</a></p>
-                <p><strong>Email :</strong> <a href="mailto:contact@laclavedor.com" class="text-primary">Ak@production.com</a></p>
-                <p><strong>Directeur de publication :</strong> Arnaud (Directeur de publication)</p>
+                <p><strong>Numéro de téléphone :</strong> <a href="tel:+33624162992" class="text-primary">06 24 16 29 92 (Kevin)</a>, <a href="tel:+33778103168" class="text-primary">07 78 10 31 68 (Arnaud)</a></p>
+                <p><strong>Email :</strong> <a href="mailto:Clavedor@gmail.com" class="text-primary">Clavedor@gmail.com</a></p>
+                <p><strong>Directeur de publication :</strong> Arnaud Loemba Kameni (Directeur de publication)</p>
 
                 <!-- Hébergement -->
                 <h3 class="my-4">Hébergement</h3>
+
                 <p>Le site est hébergé par :</p>
                 <p><strong>Nom de l'hébergeur :</strong> OVHcloud</p>
                 <p><strong>Adresse de l'hébergeur :</strong> 2 Rue Kellermann, 59100 Roubaix, France</p>
@@ -92,68 +127,95 @@
 
                 <!-- Conditions d'utilisation -->
                 <h3 class="my-4">Conditions d'utilisation</h3>
+
                 <p>
-                    En utilisant le site <a href="https://www.laclavedor.com" class="text-primary">laclavedor.com</a>, vous acceptez pleinement et entièrement les présentes conditions générales d’utilisation. Nous nous réservons le droit de les modifier ou mettre à jour à tout moment.
-                </p>
+                    En utilisant le site <a href="https://www.laclavedor.com" class="text-primary">laclavedor.com</a>, vous acceptez pleinement et entièrement les présentes <em>conditions générales d’utilisation</em>. Nous nous réservons le droit de les modifier ou mettre à jour à tout moment.
+                </p>                
 
                 <!-- Réglementation sur la vente d'alcool -->
                 <h3 class="my-4">Réglementation sur la vente d'alcool</h3>
-                <p>
-                    Conformément aux articles L. 3342-1 et suivants du Code de la santé publique, la vente d'alcool est strictement interdite aux mineurs. En utilisant ce site, vous confirmez être âgé de 18 ans ou plus. Une vérification de l’âge peut être requise lors de l’achat de nos produits.
-                </p>
-                <p>
-                    La consommation abusive d’alcool est dangereuse pour la santé. À consommer avec modération.
-                </p>
-                <p>
-                    En tant que caviste, nous nous engageons à respecter strictement ces réglementations et à promouvoir une consommation responsable.
-                </p>
+
+                <p><em>Conformément aux articles L. 3342-1 et suivants du Code de la santé publique</em>, la vente d'alcool est strictement <strong>interdite aux mineurs</strong>. En utilisant ce site, vous confirmez être âgé de <strong>18 ans ou plus</strong>. Une vérification de l’âge peut être requise lors de l’achat de nos produits.</p>
+
+                <p><em>La consommation abusive d’alcool est dangereuse pour la santé.</em> À consommer avec modération.</p>
+                                
+                <p>En tant que caviste, nous nous engageons à respecter strictement ces réglementations et à promouvoir une consommation responsable.</p>                            
+                
+                <h3 class="my-4">Législation française :</h3>
+
+                <ul>
+                  <li><strong>Il est interdit de conduire après avoir bu.</strong></li>
+                  <li><strong>Les boissons alcooliques ne doivent pas être vendues ou consommées par des personnes de moins de 18 ans.</strong></li>
+                  <li><strong>Les établissements de vente d'alcool doivent être titulaires d'une licence spécifique.</strong></li>
+                  <li><strong>Les boissons dont la teneur en alcool est particulièrement élevée sont interdites.</strong></li>
+                </ul>
+                
+                <p>Nous vous encourageons à respecter ces règles pour votre sécurité et celle des autres.</p>
+                
+                <p>Pour plus d'informations, vous pouvez consulter le site du Ministère de la Santé.</p>
+                
+                <h3 class="my-4">Clause de non-responsabilité :</h3>
+
+                <p>En achetant nos produits, vous reconnaissez être <em>responsable de votre consommation d'alcool</em>. <span class="clave">La Clave d'Or</span> <em>ne peut être tenue responsable des incidents ou accidents survenant après la consommation de ses produits</em>. Nous vous encourageons à consommer de manière responsable et à ne pas conduire après avoir bu.</p>
 
                 <!-- Propriété intellectuelle -->
                 <h3 class="my-4">Propriété intellectuelle</h3>
+
                 <p>
-                    Tous les éléments du site, incluant les textes, images, logos, vidéos et graphiques, sont protégés par les lois sur la propriété intellectuelle. Toute reproduction, modification ou utilisation de ces éléments sans l’autorisation écrite de <span class="clave">La Clave d'Or</span> est strictement interdite.
+                    Tous les éléments du site, incluant les textes, images, logos, vidéos et graphiques, sont protégés par les lois sur la propriété intellectuelle. Toute reproduction, modification ou utilisation de ces éléments sans l’autorisation écrite de <span class="clave">La Clave d'Or</span> est <em>strictement interdite</em>.
                 </p>
+
                 <p>
-                    Tous les logos, vidéos, photos et visuels sans fond ont été créés par <strong>Kevin</strong>.
+                    Tous les logos, et visuels sans fond ont été créés par <strong>Kevin Vincent</strong>.
+                </p>
+
+                <p>
+                    Toutes les vidéos, et photos ont été réalisées par <strong>La Clave D'or</strong>.
                 </p>
 
                 <!-- Responsabilité -->
                 <h3 class="my-4">Responsabilité</h3>
+
                 <p>
                     <span class="clave">La Clave d'Or</span> s'efforce de fournir des informations précises et actualisées sur son site. Cependant, nous ne pouvons être tenus responsables des erreurs, omissions ou interprétations incorrectes des contenus publiés, ni des éventuelles conséquences résultant de leur utilisation.
                 </p>
 
                 <!-- Protection des données personnelles -->
                 <h3 class="my-4">Protection des données personnelles</h3>
+
                 <p>
-                    <span class="clave">La Clave d'Or</span> traite vos données personnelles conformément à la législation en vigueur. Les informations collectées via les commandes, inscriptions ou candidatures sont protégées et utilisées uniquement dans le cadre de nos services. Consultez notre <a href="politique.html" class="text-primary">Politique de Confidentialité</a> pour plus de détails.
+                    <span class="clave">La Clave d'Or</span> traite vos données personnelles conformément à la <em>législation en vigueur</em>. Les informations collectées via les commandes, inscriptions ou candidatures sont protégées et utilisées uniquement dans le cadre de nos services. Consultez notre <a href="politique.html" class="text-primary">Politique de Confidentialité</a> pour plus de détails.
                 </p>
 
                 <!-- Modifications des mentions légales -->
                 <h3 class="my-4">Modifications des mentions légales</h3>
+
                 <p>
                     <span class="clave">La Clave d'Or</span> se réserve le droit de mettre à jour ces mentions légales à tout moment. Nous vous encourageons à les consulter régulièrement pour rester informé des éventuelles modifications.
                 </p>
+
+                <p><em>Dernière mise à jour : le 16 décembre 2024</em></p>                
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="py-4 mt-5">
+    <footer class="py-4 my-1">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <!-- Logo et Nom -->
-            <img src="images/logo.png" alt="Logo de l'entreprise" class="logo-footer d-flex align-items-center mb-3 mb-md-0" style="width: 60px;">
+            <img src="images/logo.webp" class="logo-footer" loading="lazy" alt="Logo Footer" width="60" height="60">
 
             <!-- Liens du Footer et Réseaux Sociaux -->
             <div class="footer-links d-flex flex-column flex-md-row align-items-center">
                 <div class="social-icons mb-3 mb-md-0 me-md-3">
-                    <a href="https://www.instagram.com/" target="_blank" aria-label="Visitez notre page Instagram"><img src="images/instagram.webp" alt="Icône du réseau social Instagram" class="social-icon"></a>
-                    <a href="https://www.facebook.com/" target="_blank" aria-label="Visitez notre page Facebook"><img src="images/facebook.webp" alt="Icône du réseau social Facebook" class="social-icon"></a>
-                    <a href="https://www.snapchat.com/" target="_blank" aria-label="Visitez notre page Snapchat"><img src="images/snapchat.webp" alt="Icône du réseau social Snapchat" class="social-icon"></a>
-                </div>
-                <a href="contact.html" class="btn btn-custom">Contact</a>
+                    <a href="https://www.instagram.com/la_clave_dor/" target="_blank" aria-label="Visitez notre page Instagram">
+                        <i class="fab fa-instagram social-icon"></i>
+                    </a>
+                </div>                
+                <a href="contact.php" class="btn btn-custom">Contact</a>
                 <a href="mentions.html" class="text-white ms-md-2 me-md-3">Mentions légales</a>
                 <a href="politique.html" class="text-white ms-md-2">Politique de confidentialité</a>
+                <a href="Sitemap.xml" class="text-white ms-md-2">Sitemap</a>
             </div>
         </div>
         
@@ -167,12 +229,38 @@
         </div>
     </footer>
 
+    <!-- Modal de vérification de l'âge --> 
+    <div id="age-verification-modal" style="display: flex;">
+        <div class="modal-card">
+            <h2>Vérification d'âge</h2>
+            <p>L'abus d'alcool est dangereux pour la santé. Consommez avec modération.</p>
+            <ul>
+                <li>L'alcool est interdit aux mineurs.</li>
+                <li>Ne consommez pas d'alcool si vous devez conduire.</li>
+                      
+            </ul>
+            <label>
+                <input type="checkbox" id="age-confirmation" />
+                Je confirme avoir plus de 18 ans.
+            </label>
+          <div class="buttons">
+            <button id="enter-button" disabled style="opacity: 0.5;">Entrer</button>
+            <button id="exit-button">Quitter</button>
+          </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+     <!-- cdn particle js Snow fall-->
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <script src="snow/snow.js"></script>
+
     <!-- JS personnalisé -->
+    <script src="verificationAge/verif.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

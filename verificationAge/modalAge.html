@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="verif.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvune sur le site</h1>
+
+    <!-- Modal de vérification de l'âge --> 
+    <div id="age-verification-modal" style="display: flex;">
+        <div class="modal-card">
+            <h2>Vérification d'âge</h2>
+            <p>L'abus d'alcool est dangereux pour la santé. Consommez avec modération.</p>
+            <ul>
+                <li>L'alcool est interdit aux mineurs.</li>
+                <li>Ne consommez pas d'alcool si vous devez conduire.</li>
+                      
+            </ul>
+            <label>
+                <input type="checkbox" id="age-confirmation" />
+                Je confirme avoir plus de 18 ans.
+            </label>
+          <div class="buttons">
+            <button id="enter-button" disabled style="opacity: 0.5;">Entrer</button>
+            <button id="exit-button">Quitter</button>
+          </div>
+        </div>
+    </div>
+      
+      
+      <script src="verif.js"></script>
+</body>
+</html>

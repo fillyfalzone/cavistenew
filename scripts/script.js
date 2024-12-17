@@ -1,9 +1,19 @@
-// Tableau des chemins des vidéos
-const videoPaths = [
-    "videos/video1.mp4", // Exemple de vidéo
-    "videos/video2.mp4",
-    "videos/video3.mp4",
-];
+// Récupère l'ID depuis l'URL PREVENIR ARNAUD DU RAJOUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const hash = window.location.hash.substring(1);
+
+if (hash) {
+    // Désactive toutes les sections
+    document.querySelectorAll('.tab-pane').forEach(tab => tab.classList.remove('show', 'active'));
+
+    // Active la section correspondante
+    const activeTab = document.getElementById(hash);
+    if (activeTab) {
+        activeTab.classList.add('show', 'active');
+    }
+}
+
+
+
 
 // Sélectionne l'élément contenant la liste des items du carrousel
 const carouselList = document.querySelector(".carousel__list");
@@ -14,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     simulateClickOnCenterItem();
     handleNavbarMenu();
 });
+
+
 
 // Fonction pour obtenir tous les items dynamiquement
 function getCarouselItems() {
@@ -30,26 +42,31 @@ function simulateClickOnCenterItem() {
     }
 }
 
-// Gestionnaire d'événement sur le clic
-carouselList.addEventListener("click", (event) => {
-    const clickedItem = event.target.closest(".carousel__item");
-    if (!clickedItem) return;
+if (carouselList) {
+   // Gestionnaire d'événement sur le clic
+    carouselList.addEventListener("click", (event) => {
+        const clickedItem = event.target.closest(".carousel__item");
+        if (!clickedItem) return;
 
-    updatePositions(clickedItem);
-});
+        updatePositions(clickedItem);
+    }); 
+}
 
 // Gestion des événements du swipe
 let touchStartX = 0;
 let touchEndX = 0;
 
-carouselList.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0].screenX;
-});
+if (carouselList) {
+    carouselList.addEventListener("touchstart", (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    });
+    
+    carouselList.addEventListener("touchend", (event) => {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+    });
+}
 
-carouselList.addEventListener("touchend", (event) => {
-    touchEndX = event.changedTouches[0].screenX;
-    handleSwipe();
-});
 
 // Fonction pour gérer le swipe
 function handleSwipe() {
@@ -64,19 +81,26 @@ function handleSwipe() {
 // Fonction pour passer à l'item suivant lors d'un swipe
 function swipeToNextItem() {
     const carouselItems = getCarouselItems();
-    const nextItem = Array.from(carouselItems).find((item) => item.dataset.pos === "1");
+    const nextItem = Array.from(carouselItems).find((item) => item.dataset.pos === "-1");
     if (nextItem) updatePositions(nextItem);
 }
 
 // Fonction pour revenir à l'item précédent lors d'un swipe
 function swipeToPreviousItem() {
     const carouselItems = getCarouselItems();
-    const previousItem = Array.from(carouselItems).find((item) => item.dataset.pos === "-1");
+    const previousItem = Array.from(carouselItems).find((item) => item.dataset.pos === "1");
     if (previousItem) updatePositions(previousItem);
 }
 
 // Fonction pour insérer des vidéos dans les items du carrousel
 function insertVideosIntoCarousel() {
+
+    // Tableau des chemins des vidéos
+    const videoPaths = [
+        "videos/video1.mp4", // Exemple de vidéo
+        "videos/video2.mp4",
+        "videos/video3.mp4",
+    ];
     const carouselItems = getCarouselItems();
 
     carouselItems.forEach((item, index) => {
@@ -88,6 +112,8 @@ function insertVideosIntoCarousel() {
             video.muted = true; // Mettre la vidéo en muet
             video.loop = true;  // Boucle sur la vidéo
             video.preload = "auto";  // Précharge la vidéo pour éviter les délais au démarrage
+            video.playsInline = true;    // Lecture en ligne pour éviter le plein écran
+            video.autoplay = true;       // Lecture automatique
 
             figure.appendChild(video);
             item.appendChild(figure);
@@ -150,3 +176,44 @@ function handleNavbarMenu() {
         });
     }
 }
+
+// PREVENIR ARNAUD DU RAJOUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+$(document).ready(function() {
+    // Activation des dropdowns de Bootstrap
+    $('.dropdown-toggle').dropdown();
+
+    // Gestion du hover pour les dropdowns
+    $('.nav-item.dropdown').hover(
+        function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+        },
+        function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
+        }
+    );
+
+    // Gestion du clic sur les items du dropdown
+    $('.dropdown-item').click(function(e) {
+        e.preventDefault();
+        
+        // Retire la classe active de tous les liens
+        $('.dropdown-item').removeClass('active');
+        $('.nav-link').removeClass('active');
+        
+        // Ajoute la classe active au lien cliqué
+        $(this).addClass('active');
+        $(this).closest('.nav-item').find('.nav-link').addClass('active');
+        
+        // Affiche le contenu correspondant
+        const target = $(this).attr('href');
+        $('.tab-pane').removeClass('show active');
+        $(target).addClass('show active');
+    });
+});
+
+
+
+
+
+

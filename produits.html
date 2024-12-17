@@ -10,10 +10,27 @@
     <!-- Meta essentielles pour SEO -->
     <meta name="description" content="Découvrez la sélection de produits de La Clave d'Or : vins, champagnes, spiritueux, panier garnis et accessoires. Trouvez le cadeau parfait ou enrichissez votre cave.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.laclavedor.fr/produits.html">
+
+    <!-- Balises Open Graph pour Facebook, LinkedIn et autres -->
+    <meta property="og:title" content="Produits - La Clave d'Or">
+    <meta property="og:description" content="Explorez notre sélection de vins, champagnes, et spiritueux de qualité exceptionnelle.">
+    <meta property="og:image" content="https://laclavedor.com/images/fond1.webp">
+    <meta property="og:url" content="https://laclavedor.com/produits.html">
+    <meta property="og:type" content="website">
+
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Produits - La Clave d'Or">
+    <meta name="twitter:description" content="Explorez notre sélection de vins, champagnes, et spiritueux de qualité exceptionnelle.">
+    <meta name="twitter:image" content="https://laclavedor.com/images/fond1.webp">
+    <meta name="twitter:url" content="https://laclavedor.com/produits.html">
 
     <!-- CSS Files -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="snow/snow.css">
+    <link rel="stylesheet" href="verificationAge/verif.css">
     <link rel="stylesheet" href="design/style.css">
 
     <!-- Structured Data -->
@@ -27,7 +44,7 @@
             <div class="container"> <!-- Obligé de conserver la div pour le comportement bootstrap -->
                 <!-- Logo dans la navbar -->
                 <a href="index.html" aria-label="Redirection vers la page d'accueil">
-                    <img src="images/logo.png" alt="Logo du site web" class="logo">
+                    <img src="images/logo.webp" alt="Logo de La Clave D'or" class="logo" width="60" height="60">
                 </a>
 
                 <!-- Bouton Hamburger -->
@@ -42,31 +59,31 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
                     </ul>
                 </div>
                 
                 <!-- Icône avec FontAwesome -->
                 <div class="d-flex align-items-center">
-                                      
+                    <a href="https://maps.app.goo.gl/jmfMexmvm4U3ymgt8" class="map-link" target="_blank" aria-label="Voir la carte">
+                        <i class="fa fa-map-marker-alt map-icon"></i>
+                    </a> 
                     <!-- Bouton CTA -->                   
                     <a href="tel:+33658984377" class="btn btn-custom" aria-label="Appeler le 06 58 98 43 77">APPELER</a>
                 </div>
             </div>
         </nav>
     </header>
-
+    
     <main>
+         <!-- Snow fall -->
+         <div id="snowfall"></div> 
         <!-- Section vidéo d'accueil immersive -->
         <section id="hero" class="hero">
-            <h1 class="visually-hidden">Vidéo immersive de présentation de notre caviste</h1> <!-- Titre masqué pour l'accessibilité -->
-            
-            <!-- Video immersive -->
-            <video class="hero-video hero-video-wrapper" autoplay muted playsinline>
-                <source src="videos/caviste.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la balise vidéo.
-            </video>
+            <h1 class="visually-hidden">Cave à vin La Clave D'or à Cagnes-sur-Mer</h1> <!-- Titre masqué pour l'accessibilité -->
+
+            <img class="hero-video hero-video-wrapper" src="images/fond1.webp" alt="Photo de l'intérieur de La Clave D'or">
 
             <div class="hero-content">
                 <a href="#introduction" class="btn btn-lg mt-5" aria-label="Découvrir notre histoire et nos produits">Découvrir</a> <!-- Lien vers la section "introduction" avec un label d'accessibilité -->
@@ -74,127 +91,546 @@
         </section>    
 
         <!-- Section Introduction de la page produits -->
-        <section id="introduction" class="discover-section container py-5">    
+        <section id="introduction" class="discover-section container my-5">    
 
             <!-- Logo de l'entreprise -->
-            <img src="images/logo.png" alt="Logo de La Clave D'or" class="mb-2 small-logo">
+            <img src="images/logo.webp" alt="Logo de La Clave D'or" loading="lazy" width="80" height="80">
             
             <!-- TITRE SECONDAIRE -->
-            <h2 class="py-5">La Clave D'or</h2>
+            <h2 class="my-5">Découvrez notre Sélection de Produits</h2>
             
-            <p>
-                "Au cœur de <em>Cagnes-sur-Mer</em>, à deux pas de Nice, cette cave à vin historique a été entièrement réinventée depuis le 1er juillet 2024 par un jeune propriétaire passionné, déterminé à redonner toute sa splendeur à ce lieu emblématique. Aujourd’hui, <span class="clave">La Clave D'or</span> offre un cadre moderne et accueillant, où l’authenticité rencontre l’élégance, pour les amateurs de vins, champagnes et spiritueux d'exception. Nichée au cœur de la région PACA, cette adresse incontournable vous invite à explorer une sélection soigneusement élaborée de vins d’exception, champagnes et spiritueux, dans un cadre mêlant authenticité et modernité."
-            </p>
-        </section>    
+            <p>Nous avons le plaisir de vous présenter une partie des produits soigneusement sélectionnés par votre caviste : <em>vins</em>, <em>champagnes</em>, <em>spiritueux</em>, accessoires et <em>coffrets cadeaux</em>. Cependant, tout n’est pas ici ! Notre gamme évolue régulièrement et certaines pépites sont uniquement disponibles en boutique.</p>
 
+            <p>Besoin d’un conseil ou d’un renseignement ? N’hésitez pas à nous appeler ou passez nous voir directement. Que ce soit pour dénicher une <em>bouteille unique</em>, préparer un <em>événement</em> ou offrir un <em>cadeau</em>, nous sommes là pour vous accompagner avec expertise et convivialité.</p>       
+        </section>
+        
+        <div class="separator my-5"></div>
 
-        <!-- Section Produits -->
-        <section id="blocs-produits" class="products container py-1"> <!-- ATTENTION A L'ID ICI SELON MENU DROPDOWN -->
-            <h2 class="text-center mb-5">Nos Produits</h2>
-            <div class="row">
-                <!-- Produit 1 : Vin -->
-                <div class="col-md-4 mb-4"> <!-- Div obligatoire pour bootstrap et conserver le bon comportement des blocs-->
-                    <figure class="product-item">
-                        <img src="images/vin.webp" class="product-img" loading="lazy" alt="Sélection de bouteilles de vin rouge, blanc et rosé de grande qualité">
-                        <figcaption class="product-body">
-                            <h3 class="product-title">Vins</h3>
-                            <p class="product-text">
-                                Découvrez notre gamme variée de vins rouges, blancs et rosés, sélectionnés avec soin pour satisfaire tous les amateurs.
-                            </p>
-                            <a href="produits.html#vins" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des vins">Voir la sélection</a>
-                        </figcaption>
-                    </figure>
-                </div>
+        <!-- Menu Principal -->
+        <section class="products-section">
+            <div class="container">
+                <!-- Menu principal -->
+                <nav class="main-menu">
+                    <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                        <!-- Section Vins -->
+                        <li class="nav-item dropdown" role="presentation">
+                            <a class="nav-link dropdown-toggle active" id="vinsDropdown" data-toggle="dropdown" href="#" role="tab" aria-haspopup="true" aria-expanded="false">Vins</a>
+                            <div class="dropdown-menu" aria-labelledby="vinsDropdown" role="menu">
+                                <a class="dropdown-item active" data-toggle="tab" href="#rouge" role="menuitem" aria-controls="rouge" aria-selected="true">Rouge</a>
+                                <a class="dropdown-item" data-toggle="tab" href="#blanc" role="menuitem" aria-controls="blanc" aria-selected="false">Blanc</a>
+                                <a class="dropdown-item" data-toggle="tab" href="#rose" role="menuitem" aria-controls="rose" aria-selected="false">Rosé</a>
+                            </div>
+                        </li>
+                        <!-- Section Champagnes -->
+                        <li class="nav-item dropdown" role="presentation">
+                            <a class="nav-link dropdown-toggle" id="champagnesDropdown" data-toggle="dropdown" href="#" role="tab" aria-haspopup="true" aria-expanded="false">Champagnes</a>
+                            <div class="dropdown-menu" aria-labelledby="champagnesDropdown" role="menu">
+                                <a class="dropdown-item" data-toggle="tab" href="#prestige" role="menuitem" aria-controls="prestige" aria-selected="false">Nos prestiges</a>
+                            </div>
+                        </li>
+                        <!-- Section Spiritueux -->
+                        <li class="nav-item dropdown" role="presentation">
+                            <a class="nav-link dropdown-toggle" id="spiritueuxDropdown" data-toggle="dropdown" href="#" role="tab" aria-haspopup="true" aria-expanded="false">Spiritueux</a>
+                            <div class="dropdown-menu" aria-labelledby="spiritueuxDropdown" role="menu">
+                                <a class="dropdown-item" data-toggle="tab" href="#whisky" role="menuitem" aria-controls="whisky" aria-selected="false">Whisky</a>
+                                <a class="dropdown-item" data-toggle="tab" href="#rhum" role="menuitem" aria-controls="rhum" aria-selected="false">Rhum</a>
+                            </div>
+                        </li>
+                        <!-- Section Cadeau de Noël -->
+                        <li class="nav-item dropdown" role="presentation">
+                            <a class="nav-link dropdown-toggle" id="cadeauxDropdown" data-toggle="dropdown" href="#" role="tab" aria-haspopup="true" aria-expanded="false">Cadeau de Noël</a>
+                            <div class="dropdown-menu" aria-labelledby="cadeauxDropdown" role="menu">
+                                <a class="dropdown-item" data-toggle="tab" href="#panier-garni" role="menuitem" aria-controls="panier-garni" aria-selected="false">Panier Garni</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>                   
+        
+                <!-- Contenu des onglets -->
+                <div class="tab-content my-5" id="productTabsContent">
+                    <!-- Vins Rouges -->
+                    <div class="tab-pane fade show active" id="rouge">
+                        <div class="row">
+                            <!-- 1er produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/vin1.webp" class="product-img" loading="lazy" alt="Crozes-Hermitage 2021" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Crozes-Hermitage">Saint-Joseph - Coursodon</h3>
+                                        <p class="product-text">Année 2022, Côte du Rhône</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 2ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/vin2.webp" class="product-img" loading="lazy" alt="Côte Rôtie - La Chavarine 2022" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Côte Rôtie - La Chavarine">Côte Rôtie - La Chavarine</h3>
+                                        <p class="product-text">Année 2022, Côte du Rhône</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 3ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/vin3.webp" class="product-img" loading="lazy" alt="Maby - Nessun Dorma 2021" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Maby - Nessun Dorma">Maby - Nessun Dorma</h3>
+                                        <p class="product-text">Année 2021, Côte du Rhône</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 4ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/vin4.webp" class="product-img" loading="lazy" alt="Margaux - Marquis de Mons 2016" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Margaux - Marquis de Mons">Margaux - Marquis de Mons</h3>
+                                        <p class="product-text">Année 2016, Bordeaux</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 5ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/vin5.webp" class="product-img" loading="lazy" alt="Pomerol - Château Cantereau 2019" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Pomerol - Château Cantereau">Pomerol - Château Cantereau</h3>
+                                        <p class="product-text">Année 2019, Bordeaux</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 6ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/vin6.webp" class="product-img" loading="lazy" alt="Nuits-Saint-Georges / Arnaud Baillot 2018" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Nuits-Saint-Georges / Arnaud Baillot">Charmes-Chambertin</h3>
+                                        <p class="product-text">Année 2014, Côte-d'Or</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <!-- Vins Blancs -->
+                    <div class="tab-pane fade show" id="blanc">
+                        <div class="row">
+                            <!-- 1er produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/blanc1.webp" class="product-img" loading="lazy" alt="Saint-Véran 2022" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Saint-Véran">Saint-Véran</h3>
+                                        <p class="product-text">Bourgogne, Année 2022</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 2ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/blanc2.webp" class="product-img" loading="lazy" alt="Sancerre 2023" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Sancerre">Sancerre</h3>
+                                        <p class="product-text">Loire, Année 2023</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 3ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/blanc3.webp" class="product-img" loading="lazy" alt="Les Rieux de Marié 2023" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Les Rieux de Marié">Les Rieux de Marié</h3>
+                                        <p class="product-text">Languedoc-Roussillon, Année 2023</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 4ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/blanc4.webp" class="product-img" loading="lazy" alt="Chateau Vessiere 2023" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Chateau Vessiere">Chateau Vessiere</h3>
+                                        <p class="product-text">Côte du Rhône, Année 2023</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 5ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/blanc5.webp" class="product-img" loading="lazy" alt="Mon grand-père était limonadier 2023" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Mon grand-père était limonadier">Mon grand-père était limonadier</h3>
+                                        <p class="product-text">Côte du Rhône, Année 2023</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 6ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/blanc6.webp" class="product-img" loading="lazy" alt="Chablis grand cru 2021" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Chablis grand cru">Chablis grand cru</h3>
+                                        <p class="product-text">Bourgogne, Année 2021</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Produit 2 : Champagne -->
-                <div class="col-md-4 mb-4">
-                    <figure class="product-item">
-                        <img src="images/champagne.webp" class="product-img" loading="lazy" alt="Bouteille de champagne premium pour célébrations">
-                        <figcaption class="product-body">
-                            <h3 class="product-title">Champagnes</h3>
-                            <p class="product-text">
-                                Savourez nos champagnes d'exception, parfaits pour vos moments de fête ou pour accompagner vos plats raffinés.
-                            </p>
-                            <a href="produits.html#champagne" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des champagnes">Voir la sélection</a>
-                        </figcaption>
-                    </figure>
-                </div>
+                    <!-- Vins Rosés -->
+                    <div class="tab-pane fade show" id="rose">
+                        <div class="row">
+                            <!-- 1er produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rose1.webp" class="product-img" loading="lazy" alt="Clos des Crostes 2022" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Clos des Crostes">Clos des Crostes</h3>
+                                        <p class="product-text">Var, Année 2022</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 2ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rose2.webp" class="product-img" loading="lazy" alt="Amorevolezza 2022" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Amorevolezza">Amorevolezza</h3>
+                                        <p class="product-text">Var, Année 2022</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 3ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rose3.webp" class="product-img" loading="lazy" alt="Lou Vin d'Aqui 2022" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Lou Vin d'Aqui">Lou Vin d'Aqui</h3>
+                                        <p class="product-text">Saint Blaise, Alpes-Maritimes, Année 2022</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 4ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rose4.webp" class="product-img" loading="lazy" alt="Cesar 2022" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Cesar">Cesar</h3>
+                                        <p class="product-text">Var, Année 2022</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 5ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rose5.webp" class="product-img" loading="lazy" alt="Coussin 2023" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Coussin">Coussin</h3>
+                                        <p class="product-text">Côte de Provence, Année 2023</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 6ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rose6.webp" class="product-img" loading="lazy" alt="Le Songe 2023" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Le Songe">Le Songe</h3>
+                                        <p class="product-text">Var, Année 2023</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Produit 3 : Spiritueux -->
-                <div class="col-md-4 mb-4">
-                    <figure class="product-item">
-                        <img src="images/spiritueux.webp" class="product-img" loading="lazy" alt="Collection de spiritueux rares et raffinés">
-                        <figcaption class="product-body">
-                            <h3 class="product-title">Spiritueux</h3>
-                            <p class="product-text">
-                                Explorez nos spiritueux uniques, une collection exclusive pour les connaisseurs et les amateurs de découvertes.
-                            </p>
-                            <a href="produits.html#spiritueux" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des spiritueux">Voir la sélection</a>
-                        </figcaption>
-                    </figure>
-                </div>
+                    <!-- Sélection Prestige -->
+                    <div class="tab-pane fade show" id="prestige">
+                        <div class="row">
+                            <!-- 1er produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/prestige1.webp" class="product-img" loading="lazy" alt="Alexandre Demarjory - Nature sans dosage" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Alexandre Demarjory - Nature sans dosage">Alexandre Demarjory - Nature sans dosage</h3>
+                                        <p class="product-text">Champagne-Ardenne</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 2ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/prestige2.webp" class="product-img" loading="lazy" alt="Initiation Dehu - Pinot noir et meunier" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Initiation Dehu - Pinot noir et meunier">Initiation Dehu - Pinot noir et meunier</h3>
+                                        <p class="product-text">Champagne-Ardenne</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 3ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/prestige3.webp" class="product-img" loading="lazy" alt="Billecart-Salmon - Brut sous bois" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Billecart-Salmon - Brut sous bois">Billecart-Salmon - Brut sous bois</h3>
+                                        <p class="product-text">Champagne-Ardenne</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 4ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/prestige4.webp" class="product-img" loading="lazy" alt="Louis Roederer - Collection 244" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Louis Roederer - Collection 244">Louis Roederer - Collection 244</h3>
+                                        <p class="product-text">Champagne-Ardenne</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 5ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/prestige5.webp" class="product-img" loading="lazy" alt="Ruinart - Blanc de Blancs" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Ruinart - Blanc de Blancs">Ruinart - Blanc de Blancs</h3>
+                                        <p class="product-text">Champagne-Ardenne</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 6ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/prestige6.webp" class="product-img" loading="lazy" alt="Deutz - Brut Classic" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Deutz - Brut Classic">Deutz - Brut Classic</h3>
+                                        <p class="product-text">Champagne-Ardenne</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Produit 1 : Vin -->
-                <div class="col-md-4 mb-4"> <!-- Div obligatoire pour bootstrap et conserver le bon comportement des blocs-->
-                    <figure class="product-item">
-                        <img src="images/vin.webp" class="product-img" loading="lazy" alt="Sélection de bouteilles de vin rouge, blanc et rosé de grande qualité">
-                        <figcaption class="product-body">
-                            <h3 class="product-title">Vins</h3>
-                            <p class="product-text">
-                                Découvrez notre gamme variée de vins rouges, blancs et rosés, sélectionnés avec soin pour satisfaire tous les amateurs.
-                            </p>
-                            <a href="produits.html#vins" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des vins">Voir la sélection</a>
-                        </figcaption>
-                    </figure>
-                </div>
+                    <!-- Whiskys -->
+                    <div class="tab-pane fade" id="whisky">
+                        <div class="row">
+                            <!-- 1er produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/whisky1.webp" class="product-img" loading="lazy" alt="Shikotsu Toya" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Shikotsu Toya">Shikotsu Toya</h3>
+                                        <p class="product-text">Whisky Japonais</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 2ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/whisky2.webp" class="product-img" loading="lazy" alt="Islay STORM" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Islay STORM">Islay STORM</h3>
+                                        <p class="product-text">Whisky Écossais</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 3ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/whisky3.webp" class="product-img" loading="lazy" alt="Macallan 15 ans d'âge" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Macallan 15 ans d'âge">Macallan 15 ans d'âge</h3>
+                                        <p class="product-text">Whisky Écossais</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 4ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/whisky4.webp" class="product-img" loading="lazy" alt="Carnagh" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Carnagh">Carnagh</h3>
+                                        <p class="product-text">Irish Whisky</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 5ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/whisky5.webp" class="product-img" loading="lazy" alt="Caol Ila" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Caol Ila">Caol Ila</h3>
+                                        <p class="product-text">Whisky Écossais</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 6ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/whisky6.webp" class="product-img" loading="lazy" alt="Johnny Drum" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Johnny Drum">Johnny Drum</h3>
+                                        <p class="product-text">Kentucky Bourbon</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Produit 2 : Champagne -->
-                <div class="col-md-4 mb-4">
-                    <figure class="product-item">
-                        <img src="images/champagne.webp" class="product-img" loading="lazy" alt="Bouteille de champagne premium pour célébrations">
-                        <figcaption class="product-body">
-                            <h3 class="product-title">Champagnes</h3>
-                            <p class="product-text">
-                                Savourez nos champagnes d'exception, parfaits pour vos moments de fête ou pour accompagner vos plats raffinés.
-                            </p>
-                            <a href="produits.html#champagne" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des champagnes">Voir la sélection</a>
-                        </figcaption>
-                    </figure>
-                </div>
+                    <!-- Rhums -->
+                    <div class="tab-pane fade" id="rhum">
+                        <div class="row">
+                            <!-- 1er produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rhum1.webp" class="product-img" loading="lazy" alt="Bullion" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Bullion">Bullion</h3>
+                                        <p class="product-text">Traditionnel Blanc, Île de la Réunion</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 2ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rhum2.webp" class="product-img" loading="lazy" alt="Sodade" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Sodade">Sodade</h3>
+                                        <p class="product-text">Rhum artisanal, Cap Vert</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 3ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rhum3.webp" class="product-img" loading="lazy" alt="William Hinton" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="William Hinton">William Hinton</h3>
+                                        <p class="product-text">Rhum de Madère, Portugal</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 4ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rhum4.webp" class="product-img" loading="lazy" alt="Bullion" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Bullion">Bullion</h3>
+                                        <p class="product-text">Rhum jamaïcain, Jamaïque</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 5ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rhum5.webp" class="product-img" loading="lazy" alt="Bullion millésimé" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Bullion millésimé">Bullion millésimé</h3>
+                                        <p class="product-text">Rhum vieilli, Barbados</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 6ème produit -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/rhum6.webp" class="product-img" loading="lazy" alt="Rhum Hardy" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Rhum Hardy">Rhum Hardy</h3>
+                                        <p class="product-text">Vieux rhum agricole XO, Martinique</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Produit 3 : Spiritueux -->
-                <div class="col-md-4 mb-4">
-                    <figure class="product-item">
-                        <img src="images/spiritueux.webp" class="product-img" loading="lazy" alt="Collection de spiritueux rares et raffinés">
-                        <figcaption class="product-body">
-                            <h3 class="product-title">Spiritueux</h3>
-                            <p class="product-text">
-                                Explorez nos spiritueux uniques, une collection exclusive pour les connaisseurs et les amateurs de découvertes.
-                            </p>
-                            <a href="produits.html#spiritueux" class="btn btn-outline-light mt-3" aria-label="Voir la sélection des spiritueux">Voir la sélection</a>
-                        </figcaption>
-                    </figure>
+                    <!-- Paniers Garnis -->
+                    <div class="tab-pane fade" id="panier-garni">
+                        <div class="row">
+                            <!-- 1er panier -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/panier1.webp" class="product-img" loading="lazy" alt="Coffret Plaisir" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Coffret Plaisir">Coffret Plaisir</h3>
+                                        <p class="product-text">Vin & huile</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 2ème panier -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/panier2.webp" class="product-img" loading="lazy" alt="Panier Gourmand" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Panier Gourmand">Panier Gourmand</h3>
+                                        <p class="product-text">Vin, terrine et confiture</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 3ème panier -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/panier3.webp" class="product-img" loading="lazy" alt="Coffret Gourmet" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Coffret Gourmet">Coffret Gourmet</h3>
+                                        <p class="product-text">Bouteille & tapenade</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 4ème panier -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/panier4.webp" class="product-img" loading="lazy" alt="Panier Exotique" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Panier Exotique">Panier Exotique</h3>
+                                        <p class="product-text">Assortiment de produits</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 5ème panier -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/panier5.webp" class="product-img" loading="lazy" alt="Coffret Whisky" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Coffret Whisky">Coffret Whisky</h3>
+                                        <p class="product-text">Huile, pâté et bouteille</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 6ème panier -->
+                            <div class="col-md-4 mb-4">
+                                <figure class="product-item">
+                                    <img src="images/panier6.webp" class="product-img" loading="lazy" alt="Coffret Prestige" width="433" height="577">
+                                    <figcaption class="product-body">
+                                        <h3 class="product-title" title="Coffret Prestige">Coffret Prestige</h3>
+                                        <p class="product-text">Foie gras et champagne</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>       
 
     <!-- Footer -->
-    <footer class="py-4 mt-5">
+    <footer class="py-4 my-1">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <!-- Logo et Nom -->
-            <img src="images/logo.png" alt="Logo de l'entreprise" class="logo-footer d-flex align-items-center mb-3 mb-md-0" style="width: 60px;">
+            <img src="images/logo.webp" class="logo-footer" loading="lazy" alt="Logo Footer" width="60" height="60">
 
             <!-- Liens du Footer et Réseaux Sociaux -->
             <div class="footer-links d-flex flex-column flex-md-row align-items-center">
                 <div class="social-icons mb-3 mb-md-0 me-md-3">
-                    <a href="https://www.instagram.com/" target="_blank" aria-label="Visitez notre page Instagram"><img src="images/instagram.webp" alt="Icône du réseau social Instagram" class="social-icon"></a>
-                    <a href="https://www.facebook.com/" target="_blank" aria-label="Visitez notre page Facebook"><img src="images/facebook.webp" alt="Icône du réseau social Facebook" class="social-icon"></a>
-                    <a href="https://www.snapchat.com/" target="_blank" aria-label="Visitez notre page Snapchat"><img src="images/snapchat.webp" alt="Icône du réseau social Snapchat" class="social-icon"></a>
-                </div>
-                <a href="contact.html" class="btn btn-custom">Contact</a>
+                    <a href="https://www.instagram.com/la_clave_dor/" target="_blank" aria-label="Visitez notre page Instagram">
+                        <i class="fab fa-instagram social-icon"></i>
+                    </a>
+                </div>                
+                <a href="contact.php" class="btn btn-custom">Contact</a>
                 <a href="mentions.html" class="text-white ms-md-2 me-md-3">Mentions légales</a>
                 <a href="politique.html" class="text-white ms-md-2">Politique de confidentialité</a>
+                <a href="Sitemap.xml" class="text-white ms-md-2">Sitemap</a>
             </div>
         </div>
         
@@ -208,12 +644,38 @@
         </div>
     </footer>
 
+    <!-- Modal de vérification de l'âge --> 
+    <div id="age-verification-modal" style="display: flex;">
+        <div class="modal-card">
+            <h2>Vérification d'âge</h2>
+            <p>L'abus d'alcool est dangereux pour la santé. Consommez avec modération.</p>
+            <ul>
+                <li>L'alcool est interdit aux mineurs.</li>
+                <li>Ne consommez pas d'alcool si vous devez conduire.</li>
+                      
+            </ul>
+            <label>
+                <input type="checkbox" id="age-confirmation" />
+                Je confirme avoir plus de 18 ans.
+            </label>
+          <div class="buttons">
+            <button id="enter-button" disabled style="opacity: 0.5;">Entrer</button>
+            <button id="exit-button">Quitter</button>
+          </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+     <!-- cdn particle js Snow fall-->
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <script src="snow/snow.js"></script>
+
     <!-- JS personnalisé -->
+    <script src="verificationAge/verif.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

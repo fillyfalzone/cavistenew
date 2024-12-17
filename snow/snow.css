@@ -1,0 +1,22 @@
+#snowfall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#snowfall canvas {
+  filter: blur(3px);
+  opacity: 0.6;
+}
+
+/* Assure-toi que le contenu principal est au-dessus de la neige */
+main {
+  position: relative;
+  z-index: 2;
+}
+
+
